@@ -209,7 +209,7 @@
                     </div>
                 </div>
                 <div class="video-sec">
-                    <h4 class="heading-small">Featured Video</h4>
+                    <h4 class="heading-small">Видиопрезентация</h4>
                     <div class="video-block">
                         <div class="embed-responsive embed-responsive-4by3">
                             <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"
@@ -224,66 +224,69 @@
 
 <!---
     --->
-<div class="row">
-    <footer class="container">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 footer-about wow fadeInUp animated"
-                         style="visibility: visible; animation-name: fadeInUp;">
-                        <h3>О центре</h3>
-                        <p>
-                            Научно-производственный центр Агроинженерии. Костанайский филиал.
-                        </p>
-                        <p>© 2012-2020 Celinnii.kz</p>
-                    </div>
-                    <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown animated"
-                         style="visibility: visible; animation-name: fadeInDown;">
-                        <h3>Контакты</h3>
-                        <p><i class="fas fa-map-marker-alt"></i> Адрес: Абая 32</p>
-                        <p><i class="fas fa-phone"></i> Телефон: (777) 777 77 77</p>
-                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
-                        </p>
-                        <p><i class="fab fa-skype"></i> Skype: you_online</p>
-                    </div>
-                    <div class="col-md-4 footer-links wow fadeInUp animated"
-                         style="visibility: visible; animation-name: fadeInUp;">
-                        <div class="row">
-                            <div class="col">
-                                <h3>Links</h3>
+<div class="container">
+    <div class="row">
+        <footer class="container">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 footer-about wow fadeInUp animated"
+                             style="visibility: visible; animation-name: fadeInUp;">
+                            <h3>О центре</h3>
+                            <p>
+                                Научно-производственный центр Агроинженерии. Костанайский филиал.
+                            </p>
+                            <p>© 2012-2020 Celinnii.kz</p>
+                            <div class="row">
+                                <div class="col footer-social">
+                                    <a href="#"><i class="ri-facebook-fill" style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-twitter-fill"style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-google-fill"style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-instagram-fill"style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-pinterest-fill"style="font-size:30px"></i></a>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p><a class="scroll-link" href="#top-content">Главная</a></p>
-                                <p><a href="#">Испытания</a></p>
-                                <p><a href="#">Публикации</a></p>
-                                <p><a href="#">Разработки</a></p>
+                        <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown animated"
+                             style="visibility: visible; animation-name: fadeInDown;">
+                            <h3>Контакты</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Адрес: Абая 32</p>
+                            <p><i class="fas fa-phone"></i> Телефон: (777) 777 77 77</p>
+                            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                            </p>
+                            <p><i class="fab fa-skype"></i> Skype: you_online</p>
+                        </div>
+                        <div class="col-md-4 footer-links wow fadeInUp animated"
+                             style="visibility: visible; animation-name: fadeInUp;">
+                            <div class="row">
+                                <div class="col">
+                                    <h3>Links</h3>
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <p><a href="#">Структура</a></p>
-                                <p><a href="#">Руководство</a></p>
-                                <p><a href="#">О нас</a></p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><a class="scroll-link" href="#top-content">Главная</a></p>
+                                    <p><a href="#">Испытания</a></p>
+                                    <p><a href="#">Публикации</a></p>
+                                    <p><a href="#">Разработки</a></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><a href="#">Структура</a></p>
+                                    <p><a href="#">Руководство</a></p>
+                                    <p><a href="#">О нас</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                    </div>
+            <div class="footer-bottom">
+                <div class="container">
+
                 </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
