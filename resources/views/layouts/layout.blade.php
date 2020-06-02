@@ -58,7 +58,7 @@
     </div>
 </nav>
 --->
-
+<!---
 <section class="top-nav">
     <nav class="navbar navbar-expand-lg py-0">
         <div class="container">
@@ -85,7 +85,62 @@
             </div>
         </div>
     </nav>
-</section>
+</section>--->
+<nav class="navbar navbar-expand-sm   navbar-light bg-light">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-menu collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('main.index')}}">Главная<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('news.index')}}">Новости</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Публикации</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Разработки</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Тестирования</a>
+                </li>
+                <li class="nav-item dropdown dmenu">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        О нас
+                    </a>
+                    <div class="dropdown-menu sm-menu">
+                        <a class="dropdown-item" href="#">Деятельность</a>
+                        <a class="dropdown-item" href="#">История</a>
+                        <a class="dropdown-item" href="#">Структура</a>
+                        <a class="dropdown-item" href="#">Руководство</a>
+                        <a class="dropdown-item" href="#">Контакты</a>
+                    </div>
+                </li>
+            </ul>
+            <div>
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Поиск...">
+                    <button type="submit" class="searchButton">
+                        <i class="ri-search-line" style="color: gray"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="social-part">
+                <a href="#"><i class="sn ri-mail-line" aria-hidden="true"></i></a>
+                <a href="#"><i class="sn ri-facebook-line" aria-hidden="true"></i></a>
+                <a href="#"><i class="sn ri-twitter-line" aria-hidden="true"></i></a>
+                <a href="#"><i class="sn ri-instagram-line" aria-hidden="true"></i></a>
+                <a href="#"><i class="sn ri-youtube-line" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
 @yield('head')
 <section class="section-01" id="about">
     <div class="container">
@@ -240,10 +295,10 @@
                             <div class="row">
                                 <div class="col footer-social">
                                     <a href="#"><i class="ri-facebook-fill" style="font-size:30px"></i></a>
-                                    <a href="#"><i class="ri-twitter-fill"style="font-size:30px"></i></a>
-                                    <a href="#"><i class="ri-google-fill"style="font-size:30px"></i></a>
-                                    <a href="#"><i class="ri-instagram-fill"style="font-size:30px"></i></a>
-                                    <a href="#"><i class="ri-pinterest-fill"style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-twitter-fill" style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-google-fill" style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-instagram-fill" style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-pinterest-fill" style="font-size:30px"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -252,7 +307,8 @@
                             <h3>Контакты</h3>
                             <p><i class="fas fa-map-marker-alt"></i> Адрес: Абая 32</p>
                             <p><i class="fas fa-phone"></i> Телефон: (777) 777 77 77</p>
-                            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:hello@domain.com">hello@domain.com</a>
+                            <p><i class="fas fa-envelope"></i> Email: <a
+                                    href="mailto:hello@domain.com">hello@domain.com</a>
                             </p>
                             <p><i class="fab fa-skype"></i> Skype: you_online</p>
                         </div>
@@ -298,11 +354,20 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 <script>
-    $('.test').click(function() {
+    $('.test').click(function () {
         var sectionTo = $(this).attr('href');
         $('html, body').animate({
             scrollTop: $(sectionTo).offset().top
-        }, 1500);
+        }, 1000);
+    });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.navbar-light .dmenu').hover(function () {
+            $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
+        }, function () {
+            $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
+        });
     });
 </script>
 </body>

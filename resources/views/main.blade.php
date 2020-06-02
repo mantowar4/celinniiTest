@@ -12,7 +12,7 @@
             <a href="#about" class="test link btn-get-started animated fadeInUp">О нас
                 <i class="ri-arrow-down-s-line"></i>
             </a>
-            <div class="row">
+            <!--<div class="row">
                 <div class="col-lg-3 py-5">
                     <div class="services heading-section ftco-animate fadeInUp ftco-animated">
                         <h2 class="mb-4" style="font-size: 1.5rem">НПЦ Агроинженерии</h2>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </section>
 @endsection
@@ -86,6 +86,18 @@
                 <li><i class="ri-check-double-line"></i>разработка и внедрение ресурсосберегающих технологий и
                     технических средств для
                     сельскохозяйственного производства
+                </li>
+                <li><i class="ri-check-double-line"></i>создание и мелкосерийное производство сельскохозяйственных
+                    машин, орудий и оборудования
+                </li>
+                <li><i class="ri-check-double-line"></i>проведение сертификационных, приемочных и других видов испытаний
+                    новой зарубежной и отечественной сельскохозяйственной техники и ее адаптация к
+                    почвенно-климатическим условиям региона
+                </li>
+                <li><i class="ri-check-double-line"></i>разработка стандартов, нормативных документов на методы
+                    испытаний сельскохозяйственной техники
+                </li>
+                <li><i class="ri-check-double-line"></i>повышение квалификации инженерных кадров АПК
                 </li>
             </ul>
         </div>
