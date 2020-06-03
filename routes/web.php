@@ -17,4 +17,3 @@ Route::get('/news', 'NewsController@index')->name('news.index');
 Route::get('/news/show/{id}', 'NewsController@show')->name('news.show');
 Route::get('/posts', 'NewsController@index')->name('posts.search');
 Route::get('/', 'MainController@index')->name('main.index');
-Route::get('/v2', 'MainController@index')->name('main.index');
