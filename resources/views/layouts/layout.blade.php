@@ -162,7 +162,7 @@
                 <div class="tab-content sidebar-tabing" id="nav-tabContent">
                     <div class="tab-pane active" id="home" role="tabpanel">
                         <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="http://celinnii.test/{{ $lastnews[0]->news_img ?? asset('img/default-img.jpg')}}"
+                                                             src="{{ $lastnews[0]->news_img ?? asset('img/default-img.jpg')}}"
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
@@ -172,7 +172,7 @@
                             </div>
                         </div>
                         <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="http://celinnii.test/{{ $lastnews[1]->news_img ?? asset('img/default-img.jpg')}}"
+                                                             src="{{ $lastnews[1]->news_img ?? asset('img/default-img.jpg')}}"
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
@@ -182,7 +182,7 @@
                             </div>
                         </div>
                         <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="http://celinnii.test/{{ $lastnews[2]->news_img ?? asset('img/default-img.jpg')}}"
+                                                             src="{{$lastnews[2]->news_img ?? asset('img/default-img.jpg')}}"
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
