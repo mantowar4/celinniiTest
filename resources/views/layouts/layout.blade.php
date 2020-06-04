@@ -115,9 +115,9 @@
                         О нас
                     </a>
                     <div class="dropdown-menu sm-menu">
-                        <a class="dropdown-item" href="#">Деятельность</a>
-                        <a class="dropdown-item" href="#">История</a>
-                        <a class="dropdown-item" href="#">Структура</a>
+                        <a class="dropdown-item" href="{{route('working.index')}}">Деятельность</a>
+                        <a class="dropdown-item" href="{{route('history.index')}}">История</a>
+                        <a class="dropdown-item" href="{{route('org.index')}}">Структура</a>
                         <a class="dropdown-item" href="#">Руководство</a>
                         <a class="dropdown-item" href="#">Контакты</a>
                     </div>
@@ -142,8 +142,8 @@
     </div>
 </nav>
 @yield('head')
+<div class="container">
 <section class="section-01" id="about">
-    <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12">
                 @yield('content')
@@ -166,7 +166,9 @@
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
-                                    <h2 class="title-small"><a href="{{ route('news.show', ['id' => $lastnews[0]->news_id]) }}">{{$lastnews[0]->news_title}}</a></h2>
+                                    <h2 class="title-small"><a
+                                            href="{{ route('news.show', ['id' => $lastnews[0]->news_id]) }}">{{$lastnews[0]->news_title}}</a>
+                                    </h2>
                                 </div>
                                 <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
@@ -176,7 +178,9 @@
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
-                                    <h2 class="title-small"><a href="{{ route('news.show', ['id' => $lastnews[1]->news_id]) }}">{{$lastnews[1]->news_title}}</a></h2>
+                                    <h2 class="title-small"><a
+                                            href="{{ route('news.show', ['id' => $lastnews[1]->news_id]) }}">{{$lastnews[1]->news_title}}</a>
+                                    </h2>
                                 </div>
                                 <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
@@ -186,7 +190,9 @@
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
-                                    <h2 class="title-small"><a href="{{ route('news.show', ['id' => $lastnews[2]->news_id]) }}">{{$lastnews[2]->news_title}}</a></h2>
+                                    <h2 class="title-small"><a
+                                            href="{{ route('news.show', ['id' => $lastnews[2]->news_id]) }}">{{$lastnews[2]->news_title}}</a>
+                                    </h2>
                                 </div>
                                 <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
@@ -274,12 +280,11 @@
                 </div>
             </aside>
         </div>
-    </div>
 </section>
 
 <!---
     --->
-<div class="container">
+
     <div class="row">
         <footer class="container">
             <div class="footer-top">

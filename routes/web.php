@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/working','WorkingController@index')->name('working.index');
+Route::get('/organization','OrgController@index')->name('org.index');
+Route::get('/history','HistoryController@index')->name('history.index');
 Route::get('/news', 'NewsController@index')->name('news.index');
 Route::get('/news/show/{id}', 'NewsController@show')->name('news.show');
 Route::get('/posts', 'NewsController@index')->name('posts.search');
