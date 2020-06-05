@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/orgChart.css')}}">
     <link rel="stylesheet" href="{{asset('remixicon/fonts/remixicon.css')}}">
 
 </head>
