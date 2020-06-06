@@ -177,17 +177,17 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects\celinniiTest\resources\views" />
-      <recent name="D:\Projects\celinniiTest\public" />
-      <recent name="D:\Projects\celinniiTest\resources\views\layouts" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\celinniiTest\resources\views" />
       <recent name="D:\Projects\celinniiTest\resources" />
       <recent name="D:\Projects\celinniiTest\public\js" />
       <recent name="D:\Projects\celinniiTest\public\img" />
       <recent name="D:\Projects\celinniiTest\resources\views\News" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\celinniiTest\resources\views" />
+      <recent name="D:\Projects\celinniiTest\public" />
+      <recent name="D:\Projects\celinniiTest\resources\views\layouts" />
     </key>
   </component>
   <component name="RunManager">
@@ -240,7 +240,7 @@
       <workItem from="1591162291807" duration="31000" />
       <workItem from="1591279036205" duration="6865000" />
       <workItem from="1591335353670" duration="3496000" />
-      <workItem from="1591428854065" duration="202000" />
+      <workItem from="1591428854065" duration="436000" />
     </task>
     <servers />
   </component>

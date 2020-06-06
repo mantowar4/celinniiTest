@@ -27,7 +27,7 @@ class NewsController extends Controller
         $news = DB::table('news')->orderBy('news.created_at','desc')->paginate(6);
         $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
         $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
-        return view('News.index',compact('news','lastnews', 'lastposts'));
+        return view('NewsIndex',compact('news','lastnews', 'lastposts'));
     }
 
     /**
