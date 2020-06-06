@@ -15,6 +15,9 @@ class NewsController extends Controller
      */
     public function index(Request $request)
     {
+        $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
+        $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
+
         if ($request->search) {
             $news = DB::table('news')
                 ->where('news_title','like','%'.$request->search.'%')
@@ -22,11 +25,9 @@ class NewsController extends Controller
                 ->orWhere('news_description','like','%'.$request->search.'%')
                 ->orderBy('news.created_at','desc')
                 ->get();
-            return view('newsindex',compact('news'));
+            return view('newsindex',compact('news','lastnews', 'lastposts'));
         }
         $news = DB::table('news')->orderBy('news.created_at','desc')->paginate(6);
-        $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
-        $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
         return view('newsindex',compact('news','lastnews', 'lastposts'));
     }
 
