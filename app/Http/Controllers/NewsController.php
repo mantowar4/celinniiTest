@@ -22,12 +22,12 @@ class NewsController extends Controller
                 ->orWhere('news_description','like','%'.$request->search.'%')
                 ->orderBy('news.created_at','desc')
                 ->get();
-            return view('News.index',compact('news'));
+            return view('newsindex',compact('news'));
         }
         $news = DB::table('news')->orderBy('news.created_at','desc')->paginate(6);
         $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
         $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
-        return view('NewsIndex',compact('news','lastnews', 'lastposts'));
+        return view('newsindex',compact('news','lastnews', 'lastposts'));
     }
 
     /**
@@ -62,7 +62,7 @@ class NewsController extends Controller
         $new = News::find($id);
         $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
         $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
-        return view('News.show',compact('new','lastposts','lastnews'));
+        return view('newsshow',compact('new','lastposts','lastnews'));
     }
 
     /**
