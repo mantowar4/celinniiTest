@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/contactus','ContactController@index')->name('contacts.index');
 Route::get('/working','WorkingController@index')->name('working.index');
 Route::get('/organization','OrgController@index')->name('org.index');
 Route::get('/history','HistoryController@index')->name('history.index');

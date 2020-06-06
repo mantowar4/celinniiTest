@@ -109,7 +109,7 @@
                     <a class="nav-link" href="#">Разработки</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Тестирования</a>
+                    <a class="nav-link" href="#">Испытания</a>
                 </li>
                 <li class="nav-item dropdown dmenu">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -120,7 +120,7 @@
                         <a class="dropdown-item" href="{{route('history.index')}}">История</a>
                         <a class="dropdown-item" href="{{route('org.index')}}">Структура</a>
                         <a class="dropdown-item" href="#">Руководство</a>
-                        <a class="dropdown-item" href="#">Контакты</a>
+                        <a class="dropdown-item" href="{{route('contacts.index')}}">Контакты</a>
                     </div>
                 </li>
             </ul>
