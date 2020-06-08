@@ -13,14 +13,6 @@
                         <img class="card-img-top" src="/{{ $engin->engin_img ?? asset('img/default-img.jpg')}}" alt="Card image cap">
                         <p class="card-text text-center">
                             {!! $engin->engin_description !!}
-                        <div class="video-sec">
-                            <h4 class="heading-small">Видиопрезентация</h4>
-                            <div class="video-block">
-                                <div class="embed-responsive embed-responsive-4by3">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3W18q4HW6io" allowfullscreen=""></iframe>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Created {{$engin->created_at}}</small>
