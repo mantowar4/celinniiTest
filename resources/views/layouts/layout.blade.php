@@ -106,7 +106,7 @@
                     <a class="nav-link" href="#">Публикации</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Разработки</a>
+                    <a class="nav-link" href="{{route('engin.index')}}">Разработки</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Испытания</a>
@@ -125,12 +125,12 @@
                 </li>
             </ul>
             <div>
-                <div class="search">
-                    <input type="text" class="searchTerm" placeholder="Поиск...">
+                <form class="search" action="{{route('posts.search')}}">
+                    <input name="search" type="search" class="searchTerm" placeholder="Поиск...">
                     <button type="submit" class="searchButton">
                         <i class="ri-search-line" style="color: gray"></i>
                     </button>
-                </div>
+                </form>
             </div>
             <div class="social-part">
                 <a href="#"><i class="sn ri-mail-line" aria-hidden="true"></i></a>
