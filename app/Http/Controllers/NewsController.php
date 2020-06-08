@@ -17,6 +17,7 @@ class NewsController extends Controller
     {
         $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
         $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
+        $lastengins = DB::table('engins')->orderBy('engins.created_at','desc')->limit(3)->get();
 
         if ($request->search) {
             $news = DB::table('news')
@@ -25,10 +26,10 @@ class NewsController extends Controller
                 ->orWhere('news_description','like','%'.$request->search.'%')
                 ->orderBy('news.created_at','desc')
                 ->get();
-            return view('newsindex',compact('news','lastnews', 'lastposts'));
+            return view('newsindex',compact('news','lastnews', 'lastposts','lastengins'));
         }
         $news = DB::table('news')->orderBy('news.created_at','desc')->paginate(6);
-        return view('newsindex',compact('news','lastnews', 'lastposts'));
+        return view('newsindex',compact('news','lastnews', 'lastposts','lastengins'));
     }
 
     /**
@@ -63,7 +64,8 @@ class NewsController extends Controller
         $new = News::find($id);
         $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
         $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
-        return view('newsshow',compact('new','lastposts','lastnews'));
+        $lastengins = DB::table('engins')->orderBy('engins.created_at','desc')->limit(3)->get();
+        return view('newsshow',compact('new','lastposts','lastnews','lastengins'));
     }
 
     /**

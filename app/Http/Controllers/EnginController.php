@@ -56,7 +56,8 @@ class EnginController extends Controller
         $engin = Engin::find($id);
         $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
         $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
-        return view('enginsshow',compact('engin','lastposts','lastnews'));
+        $lastengins = DB::table('engins')->orderBy('engins.created_at','desc')->limit(3)->get();
+        return view('enginsshow',compact('engin','lastposts','lastnews','lastengins'));
     }
 
     /**

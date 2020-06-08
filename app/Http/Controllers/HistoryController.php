@@ -16,7 +16,8 @@ class HistoryController extends Controller
     {
         $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
         $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
-        return view('history',compact('lastnews', 'lastposts'));
+        $lastengins = DB::table('engins')->orderBy('engins.created_at','desc')->limit(3)->get();
+        return view('history',compact('lastnews', 'lastposts','lastengins'));
     }
 
     /**
