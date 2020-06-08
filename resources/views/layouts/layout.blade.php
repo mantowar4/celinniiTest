@@ -103,7 +103,7 @@
                     <a class="nav-link" href="{{route('news.index')}}">Новости</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Публикации</a>
+                    <a class="nav-link" href="{{route('articles.index')}}">Публикации</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('engin.index')}}">Разработки</a>
@@ -201,34 +201,32 @@
                     </div>
                     <div class="tab-pane" id="profile" role="tabpanel">
                         <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{asset('img/default-img.jpg')}}"
+                                                             src="/{{$lastposts[0]->post_img ?? asset('img/default-img.jpg')}}"
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
-                                    <h2 class="title-small"><a href="#">Key Republicans sign letter warning against
-                                            candidate</a></h2>
+                                    <h2 class="title-small"><a href="{{ route('articles.show', ['id' => $lastposts[0]->post_id]) }}">{{$lastposts[0]->post_title}}</a></h2>
                                 </div>
                                 <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
                         </div>
                         <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{asset('img/default-img.jpg')}}"
+                                                             src="/{{$lastposts[1]->post_img ?? asset('img/default-img.jpg')}}"
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
-                                    <h2 class="title-small"><a href="#">‘S.N.L.’ to Lose Two Longtime Cast Members</a>
+                                    <h2 class="title-small"><a href="{{ route('articles.show', ['id' => $lastposts[1]->post_id]) }}">{{$lastposts[1]->post_title}}</a>
                                     </h2>
                                 </div>
                                 <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
                         </div>
                         <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{asset('img/default-img.jpg')}}"
+                                                             src="/{{$lastposts[2]->post_img ?? asset('img/default-img.jpg')}}"
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
-                                    <h2 class="title-small"><a href="#">Obamacare Appears to Be Making People
-                                            Healthier</a></h2>
+                                    <h2 class="title-small"><a href="{{ route('articles.show', ['id' => $lastposts[2]->post_id]) }}">{{$lastposts[2]->post_title}}</a></h2>
                                 </div>
                                 <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
@@ -236,34 +234,32 @@
                     </div>
                     <div class="tab-pane" id="messages" role="tabpanel">
                         <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{asset('img/default-img.jpg')}}"
+                                                             src="/{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
-                                    <h2 class="title-small"><a href="#">Key Republicans sign letter warning against
-                                            candidate</a></h2>
+                                    <h2 class="title-small"><a href="{{ route('engin.show', ['id' => $lastengins[0]->engin_id]) }}">{{$lastengins[0]->engin_title}}</a></h2>
                                 </div>
                                 <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
                         </div>
                         <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{asset('img/default-img.jpg')}}"
+                                                             src="/{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
-                                    <h2 class="title-small"><a href="#">‘S.N.L.’ to Lose Two Longtime Cast Members</a>
+                                    <h2 class="title-small"><a href="{{ route('engin.show', ['id' => $lastengins[1]->engin_id]) }}">{{$lastengins[1]->engin_title}}</a>
                                     </h2>
                                 </div>
                                 <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
                         </div>
                         <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{asset('img/default-img.jpg')}}"
+                                                             src="/{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
                                                              alt="Generic placeholder image"></a>
                             <div class="media-body">
                                 <div class="news-title">
-                                    <h2 class="title-small"><a href="#">Key Republicans sign letter warning against
-                                            candidate</a></h2>
+                                    <h2 class="title-small"><a href="{{ route('engin.show', ['id' => $lastengins[2]->engin_id]) }}">{{$lastengins[2]->engin_title}}</a></h2>
                                 </div>
                                 <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
