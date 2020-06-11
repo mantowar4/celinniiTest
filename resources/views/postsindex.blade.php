@@ -20,7 +20,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{$post->post_title}}</h5>
                             <p class="card-text">{{$post->post_short_title}}</p>
-                            <a href="{{ route('news.show', ['id' => $post->post_id]) }}" class="btn btn-info my-2 my-sm-0">Подробнее</a>
+                            <a href="{{ route('articles.show', ['id' => $post->post_id]) }}" class="btn btn-info my-2 my-sm-0">Подробнее</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">Created {{$post->created_at}}</small>

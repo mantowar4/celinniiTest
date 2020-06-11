@@ -6,6 +6,8 @@ use App\Engin;
 use App\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class EnginController extends Controller
 {
@@ -31,7 +33,10 @@ class EnginController extends Controller
      */
     public function create()
     {
-        //
+        $lastnews = DB::table('news')->orderBy('news.created_at', 'desc')->limit(3)->get();
+        $lastposts = DB::table('posts')->orderBy('posts.created_at', 'desc')->limit(3)->get();
+        $lastengins = DB::table('engins')->orderBy('engins.created_at', 'desc')->limit(3)->get();
+        return view('engincreate', compact('lastnews', 'lastposts', 'lastengins'));
     }
 
     /**
@@ -42,7 +47,18 @@ class EnginController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $engin = new Engin();
+        $engin->engin_title = $request->title;
+        $engin->engin_short_title = Str::length($request->title) > 70 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
+        $engin->engin_description = $request->description;
+        if ($request->file('img'))
+        {
+            $path = Storage::putFile('public',$request->file('img'));
+            $url = Storage::url($path);
+            $engin->engin_img = $url;
+        }
+        $engin -> save();
+        return redirect()->route('adminpanel')->with('success','Запись успешно добавлена!');
     }
 
     /**
@@ -68,7 +84,8 @@ class EnginController extends Controller
      */
     public function edit($id)
     {
-        //
+        $engin = Engin::find($id);
+        return view('enginedit',compact('engin'));
     }
 
     /**
@@ -80,7 +97,19 @@ class EnginController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $engin = Engin::find($id);
+        $engin->engin_title = $request->title;
+        $engin->engin_short_title = Str::length($request->title) > 30 ? Str::substr($request->title, 0, 30) . '...' : $request->title;
+        $engin->engin_description = $request->description;
+        if ($request->file('img'))
+        {
+            $path = Storage::putFile('public',$request->file('img'));
+            $url = Storage::url($path);
+            $engin->engin_img = $url;
+        }
+        $engin -> update();
+        $id = $engin -> engin_id;
+        return redirect()->route('articles.show',compact('id'))->with('success','Запись успешно добавлена!');
     }
 
     /**

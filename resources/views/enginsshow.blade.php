@@ -10,7 +10,7 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-subtitle">{{$engin->engin_short_title}}</h5>
-                        <img class="card-img-top" src="/{{ $engin->engin_img ?? asset('img/default-img.jpg')}}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ $engin->engin_img ?? asset('img/default-img.jpg')}}" alt="Card image cap">
                         <p class="card-text text-center">
                             {!! $engin->engin_description !!}
                     </div>

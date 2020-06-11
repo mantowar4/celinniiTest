@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>НПЦ Агроинженерии</title>
+    <script src="{{asset('js/textboxio.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/orgChart.css')}}">
@@ -144,7 +145,7 @@
 </nav>
 @yield('head')
 <div class="container">
-<section class="section-01" id="about">
+    <section class="section-01" id="about">
         <div class="row">
             <div class="col-lg-8 col-md-12">
                 @yield('content')
@@ -159,111 +160,164 @@
                     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages"
                                             role="tab">Разработки</a>
                     </li>
-                </ul>                          <!-- Tab panes -->
+                </ul>
+                <!-- Tab panes -->
                 <div class="tab-content sidebar-tabing" id="nav-tabContent">
                     <div class="tab-pane active" id="home" role="tabpanel">
-                        <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{ $lastnews[0]->news_img ?? asset('img/default-img.jpg')}}"
-                                                             alt="Generic placeholder image"></a>
-                            <div class="media-body">
-                                <div class="news-title">
-                                    <h2 class="title-small"><a
-                                            href="{{ route('news.show', ['id' => $lastnews[0]->news_id]) }}">{{$lastnews[0]->news_title}}</a>
-                                    </h2>
+                        @if(empty($lastnews[0]))
+
+                        @else
+                            <div class="media">
+                                <a href="{{ route('news.show', ['id' => $lastnews[0]->news_id]) }}"> <img
+                                        class="d-flex mr-3"
+                                        src="{{ $lastnews[0]->news_img ?? asset('img/default-img.jpg')}}"
+                                        alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <div class="news-title">
+                                        <h2 class="title-small"><a
+                                                href="{{ route('news.show', ['id' => $lastnews[0]->news_id]) }}">{{$lastnews[0]->news_title}}</a>
+                                        </h2>
+                                    </div>
+                                    <div class="news-auther"><span class="time">1h ago</span></div>
                                 </div>
-                                <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
-                        </div>
-                        <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{ $lastnews[1]->news_img ?? asset('img/default-img.jpg')}}"
-                                                             alt="Generic placeholder image"></a>
-                            <div class="media-body">
-                                <div class="news-title">
-                                    <h2 class="title-small"><a
-                                            href="{{ route('news.show', ['id' => $lastnews[1]->news_id]) }}">{{$lastnews[1]->news_title}}</a>
-                                    </h2>
+                        @endif
+                        @if(empty($lastnews[1]))
+
+                        @else
+                            <div class="media"><a href="{{ route('news.show', ['id' => $lastnews[1]->news_id]) }}"> <img
+                                        class="d-flex mr-3"
+                                        src="{{ $lastnews[1]->news_img ?? asset('img/default-img.jpg')}}"
+                                        alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <div class="news-title">
+                                        <h2 class="title-small"><a
+                                                href="{{ route('news.show', ['id' => $lastnews[1]->news_id]) }}">{{$lastnews[1]->news_title}}</a>
+                                        </h2>
+                                    </div>
+                                    <div class="news-auther"><span class="time">1h ago</span></div>
                                 </div>
-                                <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
-                        </div>
-                        <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{$lastnews[2]->news_img ?? asset('img/default-img.jpg')}}"
-                                                             alt="Generic placeholder image"></a>
-                            <div class="media-body">
-                                <div class="news-title">
-                                    <h2 class="title-small"><a
-                                            href="{{ route('news.show', ['id' => $lastnews[2]->news_id]) }}">{{$lastnews[2]->news_title}}</a>
-                                    </h2>
+                        @endif
+                        @if(empty($lastnews[1]))
+
+                        @else
+                            <div class="media">
+                                <a href="{{ route('news.show', ['id' => $lastnews[2]->news_id]) }}"> <img
+                                        class="d-flex mr-3"
+                                        src="{{$lastnews[2]->news_img ?? asset('img/default-img.jpg')}}"
+                                        alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <div class="news-title">
+                                        <h2 class="title-small"><a
+                                                href="{{ route('news.show', ['id' => $lastnews[2]->news_id]) }}">{{$lastnews[2]->news_title}}</a>
+                                        </h2>
+                                    </div>
+                                    <div class="news-auther"><span class="time">1h ago</span></div>
                                 </div>
-                                <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
-                        </div>
+                        @endif
                     </div>
                     <div class="tab-pane" id="profile" role="tabpanel">
-                        <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{$lastposts[0]->post_img ?? asset('img/default-img.jpg')}}"
-                                                             alt="Generic placeholder image"></a>
-                            <div class="media-body">
-                                <div class="news-title">
-                                    <h2 class="title-small"><a href="{{ route('articles.show', ['id' => $lastposts[0]->post_id]) }}">{{$lastposts[0]->post_title}}</a></h2>
+                        @if(empty($lastposts[0]))
+
+                        @else
+                            <div class="media"><a href="#"> <img class="d-flex mr-3"
+                                                                 src="{{$lastposts[0]->post_img ?? asset('img/default-img.jpg')}}"
+                                                                 alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <div class="news-title">
+                                        <h2 class="title-small"><a
+                                                href="{{ route('articles.show', ['id' => $lastposts[0]->post_id]) }}">{{$lastposts[0]->post_title}}</a>
+                                        </h2>
+                                    </div>
+                                    <div class="news-auther"><span class="time">1h ago</span></div>
                                 </div>
-                                <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
-                        </div>
-                        <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{$lastposts[1]->post_img ?? asset('img/default-img.jpg')}}"
-                                                             alt="Generic placeholder image"></a>
-                            <div class="media-body">
-                                <div class="news-title">
-                                    <h2 class="title-small"><a href="{{ route('articles.show', ['id' => $lastposts[1]->post_id]) }}">{{$lastposts[1]->post_title}}</a>
-                                    </h2>
+                        @endif
+                        @if(empty($lastposts[1]))
+
+                        @else
+                            <div class="media"><a href="#"> <img class="d-flex mr-3"
+                                                                 src="{{$lastposts[1]->post_img ?? asset('img/default-img.jpg')}}"
+                                                                 alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <div class="news-title">
+                                        <h2 class="title-small"><a
+                                                href="{{ route('articles.show', ['id' => $lastposts[1]->post_id]) }}">{{$lastposts[1]->post_title}}</a>
+                                        </h2>
+                                    </div>
+                                    <div class="news-auther"><span class="time">1h ago</span></div>
                                 </div>
-                                <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
-                        </div>
-                        <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{$lastposts[2]->post_img ?? asset('img/default-img.jpg')}}"
-                                                             alt="Generic placeholder image"></a>
-                            <div class="media-body">
-                                <div class="news-title">
-                                    <h2 class="title-small"><a href="{{ route('articles.show', ['id' => $lastposts[2]->post_id]) }}">{{$lastposts[2]->post_title}}</a></h2>
+                        @endif
+                        @if(empty($lastposts[2]))
+
+                        @else
+                            <div class="media"><a href="#"> <img class="d-flex mr-3"
+                                                                 src="{{$lastposts[2]->post_img ?? asset('img/default-img.jpg')}}"
+                                                                 alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <div class="news-title">
+                                        <h2 class="title-small"><a
+                                                href="{{ route('articles.show', ['id' => $lastposts[2]->post_id]) }}">{{$lastposts[2]->post_title}}</a>
+                                        </h2>
+                                    </div>
+                                    <div class="news-auther"><span class="time">1h ago</span></div>
                                 </div>
-                                <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
-                        </div>
+                        @endif
                     </div>
                     <div class="tab-pane" id="messages" role="tabpanel">
-                        <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
-                                                             alt="Generic placeholder image"></a>
-                            <div class="media-body">
-                                <div class="news-title">
-                                    <h2 class="title-small"><a href="{{ route('engin.show', ['id' => $lastengins[0]->engin_id]) }}">{{$lastengins[0]->engin_title}}</a></h2>
+                        @if(empty($lastengins[0]))
+
+                        @else
+                            <div class="media"><a href="#"> <img class="d-flex mr-3"
+                                                                 src="{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
+                                                                 alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <div class="news-title">
+                                        <h2 class="title-small"><a
+                                                href="{{ route('engin.show', ['id' => $lastengins[0]->engin_id]) }}">{{$lastengins[0]->engin_title}}</a>
+                                        </h2>
+                                    </div>
+                                    <div class="news-auther"><span class="time">1h ago</span></div>
                                 </div>
-                                <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
-                        </div>
-                        <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
-                                                             alt="Generic placeholder image"></a>
-                            <div class="media-body">
-                                <div class="news-title">
-                                    <h2 class="title-small"><a href="{{ route('engin.show', ['id' => $lastengins[1]->engin_id]) }}">{{$lastengins[1]->engin_title}}</a>
-                                    </h2>
+                        @endif
+                        @if(empty($lastengins[1]))
+
+                        @else
+                            <div class="media"><a href="#"> <img class="d-flex mr-3"
+                                                                 src="{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
+                                                                 alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <div class="news-title">
+                                        <h2 class="title-small"><a
+                                                href="{{ route('engin.show', ['id' => $lastengins[1]->engin_id]) }}">{{$lastengins[1]->engin_title}}</a>
+                                        </h2>
+                                    </div>
+                                    <div class="news-auther"><span class="time">1h ago</span></div>
                                 </div>
-                                <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
-                        </div>
-                        <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                             src="/{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
-                                                             alt="Generic placeholder image"></a>
-                            <div class="media-body">
-                                <div class="news-title">
-                                    <h2 class="title-small"><a href="{{ route('engin.show', ['id' => $lastengins[2]->engin_id]) }}">{{$lastengins[2]->engin_title}}</a></h2>
+                        @endif
+                        @if(empty($lastengins[2]))
+
+                        @else
+                            <div class="media"><a href="#"> <img class="d-flex mr-3"
+                                                                 src="{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
+                                                                 alt="Generic placeholder image"></a>
+                                <div class="media-body">
+                                    <div class="news-title">
+                                        <h2 class="title-small"><a
+                                                href="{{ route('engin.show', ['id' => $lastengins[2]->engin_id]) }}">{{$lastengins[2]->engin_title}}</a>
+                                        </h2>
+                                    </div>
+                                    <div class="news-auther"><span class="time">1h ago</span></div>
                                 </div>
-                                <div class="news-auther"><span class="time">1h ago</span></div>
                             </div>
-                        </div>
+
+                        @endif
                     </div>
                 </div>
                 <div class="video-sec">
@@ -277,10 +331,10 @@
                 </div>
             </aside>
         </div>
-</section>
+    </section>
 
-<!---
-    --->
+    <!---
+        --->
 
     <div class="row">
         <footer class="container">

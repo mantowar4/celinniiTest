@@ -15,11 +15,9 @@ class CreateEnginsTable extends Migration
     {
         Schema::create('engins', function (Blueprint $table) {
             $table->bigIncrements('engin_id');
-            $table->string('engin_author');
             $table->string('engin_title');
             $table->string('engin_short_title');
             $table->string('engin_img')->nullable();
-            $table->string('engin_img2')->nullable();
             $table->text('engin_description');
             $table->timestamps();
         });
