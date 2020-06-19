@@ -17,6 +17,7 @@ Route::get('/contactus','ContactController@index')->name('contacts.index');
 Route::get('/working','WorkingController@index')->name('working.index');
 Route::get('/organization','OrgController@index')->name('org.index');
 Route::get('/history','HistoryController@index')->name('history.index');
+Route::get('/management','ManagementController@index')->name('management.index');
 
 Route::get('/news', 'NewsController@index')->name('news.index');
 Route::get('/news/show/{id}', 'NewsController@show')->name('news.show');

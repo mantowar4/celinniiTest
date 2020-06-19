@@ -120,7 +120,7 @@
                         <a class="dropdown-item" href="{{route('working.index')}}">Деятельность</a>
                         <a class="dropdown-item" href="{{route('history.index')}}">История</a>
                         <a class="dropdown-item" href="{{route('org.index')}}">Структура</a>
-                        <a class="dropdown-item" href="#">Руководство</a>
+                        <a class="dropdown-item" href="{{route('management.index')}}">Руководство</a>
                         <a class="dropdown-item" href="{{route('contacts.index')}}">Контакты</a>
                     </div>
                 </li>
@@ -134,11 +134,9 @@
                 </form>
             </div>
             <div class="social-part">
-                <a href="#"><i class="sn ri-mail-line" aria-hidden="true"></i></a>
-                <a href="#"><i class="sn ri-facebook-line" aria-hidden="true"></i></a>
-                <a href="#"><i class="sn ri-twitter-line" aria-hidden="true"></i></a>
+                <a href="mailto:celinnii@mail.ru"><i class="sn ri-mail-line" aria-hidden="true"></i></a>
                 <a href="#"><i class="sn ri-instagram-line" aria-hidden="true"></i></a>
-                <a href="#"><i class="sn ri-youtube-line" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/channel/UCPGT2pBWkYotQaGsjwykcuA" target="_blank"><i class="sn ri-youtube-line" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
@@ -175,7 +173,7 @@
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('news.show', ['id' => $lastnews[0]->news_id]) }}">{{$lastnews[0]->news_title}}</a>
+                                                href="{{ route('news.show', ['id' => $lastnews[0]->news_id]) }}">{{$lastnews[0]->news_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -192,7 +190,7 @@
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('news.show', ['id' => $lastnews[1]->news_id]) }}">{{$lastnews[1]->news_title}}</a>
+                                                href="{{ route('news.show', ['id' => $lastnews[1]->news_id]) }}">{{$lastnews[1]->news_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -210,7 +208,7 @@
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('news.show', ['id' => $lastnews[2]->news_id]) }}">{{$lastnews[2]->news_title}}</a>
+                                                href="{{ route('news.show', ['id' => $lastnews[2]->news_id]) }}">{{$lastnews[2]->news_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -228,7 +226,7 @@
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('articles.show', ['id' => $lastposts[0]->post_id]) }}">{{$lastposts[0]->post_title}}</a>
+                                                href="{{ route('articles.show', ['id' => $lastposts[0]->post_id]) }}">{{$lastposts[0]->post_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -244,7 +242,7 @@
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('articles.show', ['id' => $lastposts[1]->post_id]) }}">{{$lastposts[1]->post_title}}</a>
+                                                href="{{ route('articles.show', ['id' => $lastposts[1]->post_id]) }}">{{$lastposts[1]->post_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -260,7 +258,7 @@
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('articles.show', ['id' => $lastposts[2]->post_id]) }}">{{$lastposts[2]->post_title}}</a>
+                                                href="{{ route('articles.show', ['id' => $lastposts[2]->post_id]) }}">{{$lastposts[2]->post_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -273,12 +271,12 @@
 
                         @else
                             <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                                 src="{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
+                                                                 src="{{$lastengins[0]->engin_img ?? asset('img/default-img.jpg')}}"
                                                                  alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('engin.show', ['id' => $lastengins[0]->engin_id]) }}">{{$lastengins[0]->engin_title}}</a>
+                                                href="{{ route('engin.show', ['id' => $lastengins[0]->engin_id]) }}">{{$lastengins[0]->engin_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -289,12 +287,12 @@
 
                         @else
                             <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                                 src="{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
+                                                                 src="{{$lastengins[1]->engin_img ?? asset('img/default-img.jpg')}}"
                                                                  alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('engin.show', ['id' => $lastengins[1]->engin_id]) }}">{{$lastengins[1]->engin_title}}</a>
+                                                href="{{ route('engin.show', ['id' => $lastengins[1]->engin_id]) }}">{{$lastengins[1]->engin_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -310,7 +308,7 @@
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('engin.show', ['id' => $lastengins[2]->engin_id]) }}">{{$lastengins[2]->engin_title}}</a>
+                                                href="{{ route('engin.show', ['id' => $lastengins[2]->engin_id]) }}">{{$lastengins[2]->engin_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -361,12 +359,12 @@
                         <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown animated"
                              style="visibility: visible; animation-name: fadeInDown;">
                             <h3>Контакты</h3>
-                            <p><i class="fas fa-map-marker-alt"></i> Адрес: Абая 32</p>
-                            <p><i class="fas fa-phone"></i> Телефон: (777) 777 77 77</p>
-                            <p><i class="fas fa-envelope"></i> Email: <a
-                                    href="mailto:hello@domain.com">hello@domain.com</a>
+                            <p><i class="sn ri-map-pin-2-line"></i> Адрес: 110011, Республика Казахстан, г.Костанай,
+                                пр.Абая, 34</p>
+                            <p><i class="sn ri-phone-line"></i> <a href="tel:+">+7 (7142) 55-81-46</a></p>
+                            <p><i class="sn ri-mail-line"></i> Email: <a
+                                    href="mailto:celinnii@mail.ru">celinnii@mail.ru</a>
                             </p>
-                            <p><i class="fab fa-skype"></i> Skype: you_online</p>
                         </div>
                         <div class="col-md-4 footer-links wow fadeInUp animated"
                              style="visibility: visible; animation-name: fadeInUp;">
@@ -377,15 +375,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p><a class="scroll-link" href="#top-content">Главная</a></p>
-                                    <p><a href="#">Испытания</a></p>
-                                    <p><a href="#">Публикации</a></p>
-                                    <p><a href="#">Разработки</a></p>
+                                    <p><a class="scroll-link" href="{{route('main.index')}}">Главная</a></p>
+                                    <p><a href="{{route('news.index')}}">Новости</a></p>
+                                    <p><a href="{{route('articles.index')}}">Публикации</a></p>
+                                    <p><a href="{{route('engin.index')}}">Разработки</a></p>
                                 </div>
                                 <div class="col-md-6">
-                                    <p><a href="#">Структура</a></p>
-                                    <p><a href="#">Руководство</a></p>
-                                    <p><a href="#">О нас</a></p>
+                                    <p><a href="{{route('org.index')}}">Структура</a></p>
+                                    <p><a href="{{route('management.index')}}">Руководство</a></p>
                                 </div>
                             </div>
                         </div>

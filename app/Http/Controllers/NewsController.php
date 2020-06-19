@@ -57,7 +57,7 @@ class NewsController extends Controller
     {
         $new = new News();
         $new->news_title = $request->title;
-        $new->news_short_title = Str::length($request->title) > 70 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
+        $new->news_short_title = Str::length($request->title) > 100 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
         $new->news_description = $request->description;
         if ($request->file('img'))
         {
@@ -107,7 +107,7 @@ class NewsController extends Controller
     {
         $new = News::find($id);
         $new->news_title = $request->title;
-        $new->news_short_title = Str::length($request->title) > 70 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
+        $new->news_short_title = Str::length($request->title) > 100 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
         $new->news_description = $request->description;
         if ($request->file('img'))
         {

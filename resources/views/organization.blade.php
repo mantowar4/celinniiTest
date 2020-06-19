@@ -3,7 +3,7 @@
 @section('content')
 
     <main role="main">
-        <h3 class="heading-large" style="text-align: center;">Организационная структура Костанайского филиала ТОО «НПЦ
+        <h3 class="heading-large" style="text-align: center;">Организационная структура <br> Костанайского филиала ТОО «НПЦ
             агроинженерии»</h3>
         <zk>
             <div xmlns="xhtml" class="centered">
@@ -30,10 +30,7 @@
                                         <div class="nodecontent">Лаборатория механизации возделывания и уборки кормовых культур</div>
                                     </li>
                                     <li class="leaf">
-                                        <div class="nodecontent">Лаборатория конструирования полевых машин</div>
-                                    </li>
-                                    <li class="leaf">
-                                        <div class="nodecontent">Лаборатория конструирования стацмонарных машин и оборудования</div>
+                                        <div class="nodecontent">Конструкторное бюро</div>
                                     </li>
                                     <li class="leaf">
                                         <div class="nodecontent">Лаборатория механизации обработки почвы</div>

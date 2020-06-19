@@ -18,8 +18,7 @@
                     <div class="card">
                         <img class="card-img-top" src="{{ $engin->engin_img ?? asset('img/default-img.jpg')}}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">{{$engin->engin_title}}</h5>
-                            <p class="card-text">{{$engin->engin_short_title}}</p>
+                            <h5 class="card-title">{{$engin->engin_short_title}}</h5>
                             <a href="{{ route('engin.show', ['id' => $engin->engin_id]) }}" class="btn btn-info my-2 my-sm-0">Подробнее</a>
                         </div>
                         <div class="card-footer">

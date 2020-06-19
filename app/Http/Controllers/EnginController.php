@@ -49,8 +49,9 @@ class EnginController extends Controller
     {
         $engin = new Engin();
         $engin->engin_title = $request->title;
-        $engin->engin_short_title = Str::length($request->title) > 70 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
+        $engin->engin_short_title = Str::length($request->title) > 100 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
         $engin->engin_description = $request->description;
+        $engin->engin_video_link = $request->link;
         if ($request->file('img'))
         {
             $path = Storage::putFile('public',$request->file('img'));
@@ -99,8 +100,9 @@ class EnginController extends Controller
     {
         $engin = Engin::find($id);
         $engin->engin_title = $request->title;
-        $engin->engin_short_title = Str::length($request->title) > 30 ? Str::substr($request->title, 0, 30) . '...' : $request->title;
+        $engin->engin_short_title = Str::length($request->title) > 100 ? Str::substr($request->title, 0, 30) . '...' : $request->title;
         $engin->engin_description = $request->description;
+        $engin->engin_video_link = $request->link;
         if ($request->file('img'))
         {
             $path = Storage::putFile('public',$request->file('img'));

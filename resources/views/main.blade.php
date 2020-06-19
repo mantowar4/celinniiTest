@@ -102,14 +102,19 @@
             </ul>
         </div>
         <h3 class="heading-large" style="text-align: center;">Научно-производственная база</h3>
-
+        <div>
+            <p style="text-align: center;">
+                Структурными подразделениями института являются:
+            </p>
+        </div>
         <div class="row">
             <div class="col-md-5 order-1 order-md-2">
                 <img src="http://celinnii.kz/images/f2.jpg" class="img-fluid" alt="">
             </div>
             <div class="col-md-7 order-2 order-md-1 Checklist">
-                <p class="">Структурными подразделениями института являются пять научных лабораторий:</p>
                 <ul>
+                    <li><i class="ri-check-double-line"></i>пять научных лабораторий
+                    </li>
                     <li><i class="ri-check-double-line"></i>конструкторское бюро
                     </li>
                     <li><i class="ri-check-double-line"></i>лаборатория испытаний и сертификации техники

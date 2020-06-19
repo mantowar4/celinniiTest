@@ -48,7 +48,7 @@ class PostsController extends Controller
     {
         $post = new Post();
         $post->post_title = $request->title;
-        $post->post_short_title = Str::length($request->title) > 70 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
+        $post->post_short_title = Str::length($request->title) > 100 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
         $post->post_description = $request->description;
         if ($request->file('img'))
         {
@@ -98,7 +98,7 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         $post->post_title = $request->title;
-        $post->post_short_title = Str::length($request->title) > 70 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
+        $post->post_short_title = Str::length($request->title) > 100 ? Str::substr($request->title, 0, 70) . '...' : $request->title;
         $post->post_description = $request->description;
         if ($request->file('img'))
         {

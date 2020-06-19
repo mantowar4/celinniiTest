@@ -20,8 +20,7 @@
                         <img class="card-img-top" src="{{ $new->news_img ?? asset('img/default-img.jpg')}}"
                              alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">{{$new->news_title}}</h5>
-                            <p class="card-text">{{$new->news_short_title}}</p>
+                            <h5 class="card-title">{{$new->news_short_title}}</h5>
                             <a href="{{ route('news.show', ['id' => $new->news_id]) }}"
                                class="btn btn-info my-2 my-sm-0">Подробнее</a>
                         </div>
