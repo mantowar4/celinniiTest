@@ -22,6 +22,34 @@ class MainController extends Controller
         return view('main',compact('lastnews', 'lastposts','lastengins'));
     }
 
+
+    public function search(Request $request)
+    {
+        $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
+        $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
+        $lastengins = DB::table('engins')->orderBy('engins.created_at','desc')->limit(3)->get();
+        $news = DB::table('news')
+            ->where('news_title', 'like', '%' . $request->search . '%')
+            ->orWhere('news_short_title', 'like', '%' . $request->search . '%')
+            ->orWhere('news_description', 'like', '%' . $request->search . '%')
+            ->orderBy('news.created_at', 'desc')
+            ->get();
+        $posts = DB::table('posts')
+            ->where('post_title', 'like', '%' . $request->search . '%')
+            ->orWhere('post_short_title', 'like', '%' . $request->search . '%')
+            ->orWhere('post_description', 'like', '%' . $request->search . '%')
+            ->orderBy('posts.created_at', 'desc')
+            ->get();
+        $engins = DB::table('engins')
+            ->where('engin_title', 'like', '%' . $request->search . '%')
+            ->orWhere('engin_short_title', 'like', '%' . $request->search . '%')
+            ->orWhere('engin_description', 'like', '%' . $request->search . '%')
+            ->orderBy('engins.created_at', 'desc')
+            ->get();
+        return view('newsindex', compact('news', 'posts','engins','lastnews', 'lastposts', 'lastengins'));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -22,7 +22,7 @@ class NewsController extends Controller
         $lastposts = DB::table('posts')->orderBy('posts.created_at', 'desc')->limit(3)->get();
         $lastengins = DB::table('engins')->orderBy('engins.created_at', 'desc')->limit(3)->get();
 
-        if ($request->search) {
+        /*if (!$request->search) {
             $news = DB::table('news')
                 ->where('news_title', 'like', '%' . $request->search . '%')
                 ->orWhere('news_short_title', 'like', '%' . $request->search . '%')
@@ -42,7 +42,7 @@ class NewsController extends Controller
                 ->orderBy('engins.created_at', 'desc')
                 ->get();
             return view('newsindex', compact('news', 'posts','engins','lastnews', 'lastposts', 'lastengins'));
-        }
+        }*/
         $news = DB::table('news')->orderBy('news.created_at', 'desc')->paginate(6);
         return view('newsindex', compact('news', 'lastnews', 'lastposts', 'lastengins'));
     }

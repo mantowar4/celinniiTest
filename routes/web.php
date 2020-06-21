@@ -42,7 +42,7 @@ Route::patch('/engin/update/{id}', 'EnginController@update')->name('engin.update
 Route::get('/organization','OrgController@index')->name('org.index');
 Route::get('/organization/show/{id}','OrgController@show')->name('org.show');
 
-Route::get('/search', 'NewsController@index')->name('posts.search');
+Route::get('/search', 'MainController@search')->name('posts.search');
 Route::get('/', 'MainController@index')->name('main.index');
 
 Auth::routes();
