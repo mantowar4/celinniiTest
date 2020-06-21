@@ -127,7 +127,7 @@
             </ul>
             <div>
                 <form class="search" action="{{route('posts.search')}}">
-                    <input name="search" type="search" class="searchTerm" placeholder="Поиск...">
+                    <input name="search" type="search" class="searchTerm" placeholder="Поиск..." required>
                     <button type="submit" class="searchButton">
                         <i class="ri-search-line" style="color: gray"></i>
                     </button>
@@ -319,7 +319,7 @@
                     </div>
                 </div>
                 <div class="video-sec">
-                    <h4 class="heading-small">Видиопрезентация</h4>
+                    <h4 class="heading-small">Видеопрезентация</h4>
                     <div class="video-block">
                         <div class="embed-responsive embed-responsive-4by3">
                             <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"
@@ -333,6 +333,39 @@
 
     <!---
         --->
+    <section id="clients" class="clients section-bg">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <img src="{{asset('img/logo1.png')}}" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <img src="{{asset('img/logo2.png')}}" class="img-fluid" alt="">
+                </div>
+<!--
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                </div>
+-->
+            </div>
+
+        </div>
+    </section>
 
     <div class="row">
         <footer class="container">

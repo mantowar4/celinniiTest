@@ -15,7 +15,7 @@
         </div>
         <div class="form-group">
             <p>Ссылка на видео</p>
-            <input name="link" type="text" class="form-control" required>
+            <input name="link" type="text" class="form-control">
         </div>
         <div class="form-group">
             <p>Изображение - заголовок</p>

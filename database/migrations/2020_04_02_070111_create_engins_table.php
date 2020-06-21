@@ -19,7 +19,7 @@ class CreateEnginsTable extends Migration
             $table->string('engin_short_title');
             $table->string('engin_img')->nullable();
             $table->text('engin_description');
-            $table->text('engin_video_link');
+            $table->text('engin_video_link')->nullable();
             $table->timestamps();
         });
     }

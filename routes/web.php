@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/contactus','ContactController@index')->name('contacts.index');
 Route::get('/working','WorkingController@index')->name('working.index');
-Route::get('/organization','OrgController@index')->name('org.index');
 Route::get('/history','HistoryController@index')->name('history.index');
 Route::get('/management','ManagementController@index')->name('management.index');
 
@@ -40,9 +39,12 @@ Route::post('/enginpost', 'EnginController@store')->name('engin.store');
 Route::get('/adminpanel/engin/edit/{id}', 'EnginController@edit')->name('engin.edit');
 Route::patch('/engin/update/{id}', 'EnginController@update')->name('engin.update');
 
+Route::get('/organization','OrgController@index')->name('org.index');
+Route::get('/organization/show/{id}','OrgController@show')->name('org.show');
+
 Route::get('/search', 'NewsController@index')->name('posts.search');
 Route::get('/', 'MainController@index')->name('main.index');
 
 Auth::routes();
 
-Route::get('/adminpanel', 'HomeController@index')->name('adminpanel');
+Route::get('/adminpanel', 'AdminController@index')->name('adminpanel');

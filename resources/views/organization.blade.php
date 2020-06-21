@@ -3,7 +3,8 @@
 @section('content')
 
     <main role="main">
-        <h3 class="heading-large" style="text-align: center;">Организационная структура <br> Костанайского филиала ТОО «НПЦ
+        <h3 class="heading-large" style="text-align: center;">Организационная структура <br> Костанайского филиала ТОО
+            «НПЦ
             агроинженерии»</h3>
         <zk>
             <div xmlns="xhtml" class="centered">
@@ -14,6 +15,13 @@
                             <li class="vertical">
                                 <div class="nodecontent">Заместитель директора по науке</div>
                                 <ul>
+                                @foreach($organization as $org)
+                                        <li class="leaf">
+                                            <div class="nodecontent"><a href="{{route('org.show', ['id' => $org->org_id])}}">{{$org->org_title}}</a></div>
+                                        </li>
+                                @endforeach
+
+                                <!--
                                     <li class="leaf">
                                         <div class="nodecontent">Лаборатория механизированных технологий</div>
                                     </li>
@@ -38,6 +46,7 @@
                                     <li class="leaf">
                                         <div class="nodecontent">Центр испытания и сертификации сельскохозяйственной техники</div>
                                     </li>
+                                    -->
                                 </ul>
                             </li>
                             <li class="leaf">

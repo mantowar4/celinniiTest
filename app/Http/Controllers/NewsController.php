@@ -14,6 +14,7 @@ class NewsController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * @throws \Illuminate\Validation\ValidationException
      */
     public function index(Request $request)
     {
@@ -28,7 +29,19 @@ class NewsController extends Controller
                 ->orWhere('news_description', 'like', '%' . $request->search . '%')
                 ->orderBy('news.created_at', 'desc')
                 ->get();
-            return view('newsindex', compact('news', 'lastnews', 'lastposts', 'lastengins'));
+            $posts = DB::table('posts')
+                ->where('post_title', 'like', '%' . $request->search . '%')
+                ->orWhere('post_short_title', 'like', '%' . $request->search . '%')
+                ->orWhere('post_description', 'like', '%' . $request->search . '%')
+                ->orderBy('posts.created_at', 'desc')
+                ->get();
+            $engins = DB::table('engins')
+                ->where('engin_title', 'like', '%' . $request->search . '%')
+                ->orWhere('engin_short_title', 'like', '%' . $request->search . '%')
+                ->orWhere('engin_description', 'like', '%' . $request->search . '%')
+                ->orderBy('engins.created_at', 'desc')
+                ->get();
+            return view('newsindex', compact('news', 'posts','engins','lastnews', 'lastposts', 'lastengins'));
         }
         $news = DB::table('news')->orderBy('news.created_at', 'desc')->paginate(6);
         return view('newsindex', compact('news', 'lastnews', 'lastposts', 'lastengins'));

@@ -1,8 +1,27 @@
+.clients img {
+    max-width: 45%;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    padding: 15px 0;
+    -webkit-filter: grayscale(100);
+    filter: grayscale(100);
+}
+
+.clients img:hover {
+    -webkit-filter: none;
+    filter: none;
+    transform: scale(1.15);
+}
+
+.section-bg{
+    padding: 10px 0;
+    background-color: #f8f9fa;
+}
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 body{
-    background: #f2f2f2;
+    background: #fff;
     font-family: 'Open Sans', sans-serif;
 }
 

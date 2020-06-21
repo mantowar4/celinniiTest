@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\organization;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class OrgController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,11 +14,10 @@ class OrgController extends Controller
      */
     public function index()
     {
-        $organization = DB::table('organizations')->get();
-        $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
-        $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
-        $lastengins = DB::table('engins')->orderBy('engins.created_at','desc')->limit(3)->get();
-        return view('organization',compact('organization','lastnews', 'lastposts','lastengins'));
+        $news = DB::table('news')->get();
+        $posts = DB::table('posts')->get();
+        $engins = DB::table('engins')->get();
+        return view('adminhome',compact('news', 'posts', 'engins'));
     }
 
     /**
@@ -51,11 +49,7 @@ class OrgController extends Controller
      */
     public function show($id)
     {
-        $org = organization::find($id);
-        $lastnews = DB::table('news')->orderBy('news.created_at', 'desc')->limit(3)->get();
-        $lastposts = DB::table('posts')->orderBy('posts.created_at', 'desc')->limit(3)->get();
-        $lastengins = DB::table('engins')->orderBy('engins.created_at', 'desc')->limit(3)->get();
-        return view('organizationshow', compact('org', 'lastposts', 'lastnews', 'lastengins'));
+        //
     }
 
     /**
