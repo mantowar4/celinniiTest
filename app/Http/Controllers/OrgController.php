@@ -51,11 +51,10 @@ class OrgController extends Controller
      */
     public function show($id)
     {
-        $org = organization::find($id);
         $lastnews = DB::table('news')->orderBy('news.created_at', 'desc')->limit(3)->get();
         $lastposts = DB::table('posts')->orderBy('posts.created_at', 'desc')->limit(3)->get();
         $lastengins = DB::table('engins')->orderBy('engins.created_at', 'desc')->limit(3)->get();
-        return view('organizationshow', compact('org', 'lastposts', 'lastnews', 'lastengins'));
+        return view('organizationshow', compact('id', 'lastposts', 'lastnews', 'lastengins'));
     }
 
     /**

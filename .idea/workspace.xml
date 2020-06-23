@@ -40,13 +40,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="homestead: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="homestead@192.168.10.10" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="homestead: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="news: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -254,6 +247,8 @@
       <workItem from="1592328492740" duration="6230000" />
       <workItem from="1592753008730" duration="11121000" />
       <workItem from="1592764363568" duration="1424000" />
+      <workItem from="1592766004052" duration="319000" />
+      <workItem from="1592922172170" duration="2291000" />
     </task>
     <servers />
   </component>

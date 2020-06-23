@@ -15,38 +15,37 @@
                             <li class="vertical">
                                 <div class="nodecontent">Заместитель директора по науке</div>
                                 <ul>
+                                <!--
                                 @foreach($organization as $org)
                                         <li class="leaf">
                                             <div class="nodecontent"><a href="{{route('org.show', ['id' => $org->org_id])}}">{{$org->org_title}}</a></div>
                                         </li>
                                 @endforeach
-
-                                <!--
-                                    <li class="leaf">
-                                        <div class="nodecontent">Лаборатория механизированных технологий</div>
-                                    </li>
-                                    <li class="leaf">
-                                        <div class="nodecontent">Лаборатория разработки комбинированных орудий</div>
-                                    </li>
-                                    <li class="leaf">
-                                        <div class="nodecontent">Лаборатория механизации послеуборочной обработки зерна</div>
-                                    </li>
-                                    <li class="leaf">
-                                        <div class="nodecontent">Лаборатория использования машинно-тракторного парка</div>
-                                    </li>
-                                    <li class="leaf">
-                                        <div class="nodecontent">Лаборатория механизации возделывания и уборки кормовых культур</div>
-                                    </li>
-                                    <li class="leaf">
-                                        <div class="nodecontent">Конструкторное бюро</div>
-                                    </li>
-                                    <li class="leaf">
-                                        <div class="nodecontent">Лаборатория механизации обработки почвы</div>
-                                    </li>
-                                    <li class="leaf">
-                                        <div class="nodecontent">Центр испытания и сертификации сельскохозяйственной техники</div>
-                                    </li>
                                     -->
+                                    <li class="leaf">
+                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>1])}}">Лаборатория механизированных технологий</a></div>
+                                    </li>
+                                    <li class="leaf">
+                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>2])}}">Лаборатория разработки комбинированных орудий</a></div>
+                                    </li>
+                                    <li class="leaf">
+                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>3])}}">Лаборатория механизации послеуборочной обработки зерна</a></div>
+                                    </li>
+                                    <li class="leaf">
+                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>4])}}">Лаборатория использования машинно-тракторного парка</a></div>
+                                    </li>
+                                    <li class="leaf">
+                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>5])}}">Лаборатория механизации возделывания и уборки кормовых культур</a></div>
+                                    </li>
+                                    <li class="leaf">
+                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>6])}}">Конструкторное бюро</a></div>
+                                    </li>
+                                    <li class="leaf">
+                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>7])}}">Лаборатория механизации обработки почвы</a></div>
+                                    </li>
+                                    <li class="leaf">
+                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>8])}}">Центр испытания и сертификации сельскохозяйственной техники</a></div>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="leaf">

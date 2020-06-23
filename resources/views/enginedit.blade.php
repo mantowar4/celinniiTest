@@ -17,7 +17,7 @@
         </div>
         <div class="form-group">
             <p>Ссылка на видео</p>
-            <input name="link" type="text" class="form-control" value="{{$engin->engin_video_link}} required>
+            <input name="link" type="text" class="form-control" value="{{$engin->engin_video_link}}" required>
         </div>
         <div class="form-group">
             <p>Изображение - заголовок</p>
