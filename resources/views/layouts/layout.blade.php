@@ -7,11 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>НПЦ Агроинженерии</title>
     <script src="{{asset('js/textboxio.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/orgChart.css')}}">
     <link rel="stylesheet" href="{{asset('remixicon/fonts/remixicon.css')}}">
-
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -110,7 +112,7 @@
                     <a class="nav-link" href="{{route('engin.index')}}">Разработки</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Испытания</a>
+                    <a class="nav-link" href="{{route('org.show',['id'=>8])}}">Испытания</a>
                 </li>
                 <li class="nav-item dropdown dmenu">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
@@ -136,7 +138,8 @@
             <div class="social-part">
                 <a href="mailto:celinnii@mail.ru"><i class="sn ri-mail-line" aria-hidden="true"></i></a>
                 <a href="#"><i class="sn ri-instagram-line" aria-hidden="true"></i></a>
-                <a href="https://www.youtube.com/channel/UCPGT2pBWkYotQaGsjwykcuA" target="_blank"><i class="sn ri-youtube-line" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/channel/UCPGT2pBWkYotQaGsjwykcuA" target="_blank"><i
+                        class="sn ri-youtube-line" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
@@ -345,23 +348,23 @@
                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
                     <img src="{{asset('img/logo2.png')}}" class="img-fluid" alt="">
                 </div>
-<!--
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-                </div>
+                <!--
+                                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                                </div>
 
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-                </div>
+                                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                                </div>
 
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-                </div>
+                                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                                </div>
 
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-                </div>
--->
+                                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                                    <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                                </div>
+                -->
             </div>
 
         </div>
@@ -381,11 +384,9 @@
                             <p>© 2012-2020 Celinnii.kz</p>
                             <div class="row">
                                 <div class="col footer-social">
-                                    <a href="#"><i class="ri-facebook-fill" style="font-size:30px"></i></a>
-                                    <a href="#"><i class="ri-twitter-fill" style="font-size:30px"></i></a>
-                                    <a href="#"><i class="ri-google-fill" style="font-size:30px"></i></a>
-                                    <a href="#"><i class="ri-instagram-fill" style="font-size:30px"></i></a>
-                                    <a href="#"><i class="ri-pinterest-fill" style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-mail-line" style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-instagram-line" style="font-size:30px"></i></a>
+                                    <a href="#"><i class="ri-youtube-line" style="font-size:30px"></i></a>
                                 </div>
                             </div>
                         </div>

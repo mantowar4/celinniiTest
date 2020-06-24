@@ -1,3 +1,4 @@
+
 .clients img {
     max-width: 45%;
     transition: all 0.4s ease-in-out;
@@ -419,7 +420,7 @@ section {
 }
 
 .card {
-    float: left;
+    /*float: left;*/
     width: 100%
 }
 

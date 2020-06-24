@@ -28,6 +28,9 @@
                 <!-- Authentication Links -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('main.index') }}">{{ __('Вернуться на сайт') }}</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('Войти') }}</a>
                     </li>
                     @if (Route::has('register'))
@@ -86,8 +89,9 @@
         </div>
     @endif
     @yield('create')
+
+        @endguest
 </div>
-@endguest
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>

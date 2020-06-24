@@ -273,34 +273,193 @@
                 <div class="col-3">
                     <img src="{{asset('img/11.jpg')}}" class="img-fluid">
                 </div>
-                <div class="col-6">
-                    <h5 class="mb-0 text-truncated">ИСПЫТАТЕЛЬНАЯ ЛАБОРАТОРИЯ КОСТАНАЙСКОГО ФИЛИАЛА
-                        «ТОО НАУЧНО-ПРОИЗВОДСТВЕННЫЙ ЦЕНТР  АГРОИНЖЕНЕРИИ»</h5>
+                <div class="col-6" style="margin: auto">
+                    <h6 class="mb-0 text-truncated text-center ml-auto mt-auto">ИСПЫТАТЕЛЬНАЯ ЛАБОРАТОРИЯ КОСТАНАЙСКОГО
+                        ФИЛИАЛА
+                        «ТОО НАУЧНО-ПРОИЗВОДСТВЕННЫЙ ЦЕНТР АГРОИНЖЕНЕРИИ»</h6>
                 </div>
                 <div class="col-3">
                     <img src="{{asset('img/222.jpg')}}" class="img-fluid">
                 </div>
             </div>
-
-            <div class="Checklist">
-                <h6 class="mb-0 text-truncated">Лаборатория проводит сертификационные испытания машин
-                    для сельского и лесного хозяйства, машин общего и специального назначения, автомобилей, а так же
-                    другие виды испытаний:</h6>
-                <ul>
-                    <li><i class="ri-check-double-line"></i>предварительные;
-                    </li>
-                    <li><i class="ri-check-double-line"></i>приемочные;
-                    </li>
-                    <li><i class="ri-check-double-line"></i>типовые;
-                    </li>
-                    <li><i class="ri-check-double-line"></i>периодические;
-                    </li>
-                    <li><i class="ri-check-double-line"></i>квалификационные;
-                    </li>
-                    <li><i class="ri-check-double-line"></i>инспекционные.
-                    </li>
-                </ul>
+            <div class="row">
+                <div class="col-8">
+                    <div class="Checklist" style="text-align:center;">
+                        <h6 class="mb-0 text-truncated">Лаборатория проводит сертификационные испытания машин
+                            для сельского и лесного хозяйства, машин общего и специального назначения, автомобилей, а
+                            так же
+                            другие виды испытаний:</h6>
+                        <ul style="display:inline-table;">
+                            <li><i class="ri-check-double-line"></i>предварительные;
+                            </li>
+                            <li><i class="ri-check-double-line"></i>приемочные;
+                            </li>
+                            <li><i class="ri-check-double-line"></i>типовые;
+                            </li>
+                            <li><i class="ri-check-double-line"></i>периодические;
+                            </li>
+                            <li><i class="ri-check-double-line"></i>квалификационные;
+                            </li>
+                            <li><i class="ri-check-double-line"></i>инспекционные.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <a data-fancybox="gallery" href="{{asset('img/atRus.jpg')}}"><img src="{{asset('img/atRus.jpg')}}"
+                                                                                      class="img-fluid"></a>
+                </div>
             </div>
+            <p style="text-align: center">
+                Аккредитована в системе аккредитации Республики Казахстан
+                на соответствие требованиям СТ РК ИСО/ МЭК 17025-2009
+                «Общие требования к компетентности испытательных и калибровочных лабораторий» и включена в
+                межгосударственный реестр испытательных лабораторий стран Таможенного Союза с правом работы по
+                требованиям технических регламентов
+                ТР ТС 010/2011 «О безопасности машин и оборудования», а также
+                ТР РК «Требования к безопасности автотранспортных средств»,
+                ТР РК «Требования к безопасности сельскохозяйственных и лесозаготовительных тракторов, прицепов и машин,
+                аттестат аккредитации № KZ. И.11.0130 от 7 марта 2017 года.
+            </p>
+            <div>
+                <h3 style="text-align: center">Область аккредитации испытательной лаборатории</h3>
+                <div class="Checklist">
+                    <h4 class="mb-0 text-truncated" style="text-align: center">Машины для сельского и лесного
+                        хозяйства:</h4>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i>Тракторы;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Машины для сельского и лесного хозяйства, используемые
+                            для подготовки или культивации почвы: плуги, бороны, рыхлители, культиваторы, полольники и
+                            мотыги, почвофрезы, сеялки, сажалки и машины рассадопосадочные, разбрасыватели и
+                            распределители органических и минеральных удобрений, прочие;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Машины уборочные: косилки, грабли боковые и
+                            сеноворошилки, пресс-подборщики, картофелекопатели и картофелеуборочные машины, машины
+                            свекловичные ботворезные и машины свеклоуборочные, комбайны зерноуборочные и
+                            силосоуборочные;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Прицепы и полуприцепы самозагружающиеся или
+                            саморазгружающиеся, используемые в сельском хозяйстве;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Машины для сельского и лесного хозяйства прочие: машины
+                            и механизмы для приготовления кормов для животных, оборудование для птицеводства; инкубаторы
+                            и брудеры.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="Checklist">
+                    <h4 class="mb-0 text-truncated" style="text-align: center">Машины общего назначения:</h4>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i>Двигатели и турбины, кроме двигателей авиационных,
+                            автомобильных и мотоциклетных;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Оборудование подъемно-транспортное.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="Checklist">
+                    <h4 class="mb-0 text-truncated" style="text-align: center">Оборудование специального назначения
+                        прочее:</h4>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i>Машины для горнодобывающей промышленности, разработки
+                            карьеров и строительства: машины и оборудование прочие для передвижения материалов,
+                            калибровки, выравнивания,
+                            скреперных работ, экскавации, трамбовки, уплотнения или выемки породы, минералов или руд
+                            (включая бульдозеры, экскаваторы одноковшовые механические и катки дорожные);
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Машины прочие для выемки, трамбования или уплотнения
+                            грунта, машины для общественных работ, строительства и аналогичных работ; снегоочистители;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Оборудование для обработки продуктов пищевых, напитков и
+                            изделий табачных;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Машины для очистки, сортировки или калибровки семян,
+                            зерна или культур бобовых сухих.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="Checklist">
+                    <h4 class="mb-0 text-truncated" style="text-align: center">Автомобили</h4>
+                    <ul>
+                        <li><i class="ri-check-double-line"></i>Двигатели внутреннего сгорания для автомобилей;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Автомобили легковые пассажирские;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Автобусы;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Автомобили грузовые;
+                        </li>
+                        <li><i class="ri-check-double-line"></i>Автомобили специальные и специализированные:, автокраны,
+                            автобуровые, транспортные средства пожарные, автобетономешалки, прочие;
+                        </li>
+                        Прицепы и полуприцепы, контейнеры.
+                        <li><i class="ri-check-double-line"></i>Прицепы и полуприцепы, контейнеры.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-columns">
+                <div class="card">
+                    <a data-fancybox="gallery" href="{{asset('img/1w.jpg')}}">
+                        <img class="img-fluid" src="{{asset('img/1w.jpg')}}" alt="..." class="img-fluid">
+                    </a>
+                </div>
+                <div class="card">
+                    <a data-fancybox="gallery" href="{{asset('img/2w.jpg')}}">
+                        <img class="img-fluid" src="{{asset('img/2w.jpg')}}" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="card">
+                    <a data-fancybox="gallery" href="{{asset('img/3w.jpg')}}">
+                        <img class="img-fluid" src="{{asset('img/3w.jpg')}}" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="card">
+                    <a data-fancybox="gallery" href="{{asset('img/4w.jpg')}}">
+                        <img class="img-fluid" src="{{asset('img/4w.jpg')}}" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="card">
+                    <a data-fancybox="gallery" href="{{asset('img/5w.jpg')}}">
+                        <img class="img-fluid" src="{{asset('img/5w.jpg')}}" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="card">
+                    <a data-fancybox="gallery" href="{{asset('img/6w.jpg')}}">
+                        <img class="img-fluid" src="{{asset('img/6w.jpg')}}" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="card">
+                    <a data-fancybox="gallery" href="{{asset('img/7w.jpg')}}">
+                        <img class="img-fluid" src="{{asset('img/7w.jpg')}}" alt="" class="img-fluid">
+                    </a>
+                </div>
+                <div class="card">
+                    <a data-fancybox="gallery" href="{{asset('img/8w.jpg')}}">
+                        <img class="img-fluid" src="{{asset('img/8w.jpg')}}" alt="" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+            <p style="text-align: center">
+                За девятнадцать лет работы испытательной лаборатории проведены приемочные, периодические и
+                сертификационные испытания более четырехсот семидесяти образцов сельскохозяйственной техники и
+                оборудования, тракторов, зерно и кормоуборочных комбайнов, грузовых и легковых автомобилей
+                отечественного производства и производителей ближнего и дальнего зарубежья.
+                Проведение испытаний позволяет производителям техники произвести адаптацию машин к
+                почвенно-климатическим условиям Северного Казахстана, что обеспечивает повышение их
+                конкурентоспособности. Еще одно из преимуществ – реклама продукции в регионе.
+            </p>
+            <p style="text-align: center">
+                Перечень сельскохозяйственной техники, прошедшей испытания
+                представлен <a href="{{asset('docs/ispitaniya.pdf')}}" >здесь</a>
+            </p>
         @endif
     </main>
 
