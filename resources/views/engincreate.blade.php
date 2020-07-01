@@ -1,7 +1,7 @@
 @extends('adminpanel')
 
 @section('create')
-    <form action="{{route('engin.store')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('engin.store',app()->getLocale())}}" method="post" enctype="multipart/form-data">
         @csrf
         <h3>Добавить запись в 'разработки'</h3>
         <div class="form-group">

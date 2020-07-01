@@ -9,12 +9,16 @@
                          alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{$new->news_short_title}}</h5>
-                        <a href="{{ route('news.show', ['id' => $new->news_id]) }}"
+                        <a href="{{ route('news.show', ['id' => $new->news_id, app()->getLocale()]) }}"
                            class="btn btn-info my-2 my-sm-0">Подробнее</a>
-                        <a href="{{ route('news.edit', ['id' => $new->news_id]) }}"
+                        <a href="{{ route('news.edit', ['id' => $new->news_id, app()->getLocale()]) }}"
                            class="btn btn-success my-2 my-sm-0">Редактировать</a>
-                        <a href="{{ route('news.show', ['id' => $new->news_id]) }}"
-                           class="btn btn-danger my-2 my-sm-0">Удалить</a>
+                        <form action="{{route('news.delete',['id'=>$new->news_id])}}"
+                              method="post">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit" value="Удалить" class="btn btn-danger my-2 my-sm-0">
+                        </form>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Created {{$new->created_at}}</small>
@@ -29,11 +33,11 @@
                          alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{$post->post_short_title}}</h5>
-                        <a href="{{ route('articles.show', ['id' => $post->post_id]) }}"
+                        <a href="{{ route('articles.show', ['id' => $post->post_id, app()->getLocale()]) }}"
                            class="btn btn-info my-2 my-sm-0">Подробнее</a>
-                        <a href="{{ route('articles.edit', ['id' => $post->post_id]) }}"
+                        <a href="{{ route('articles.edit', ['id' => $post->post_id, app()->getLocale()]) }}"
                            class="btn btn-success my-2 my-sm-0">Редактировать</a>
-                        <a href="{{ route('articles.edit', ['id' => $post->post_id]) }}"
+                        <a href="{{ route('articles.edit', ['id' => $post->post_id, app()->getLocale()]) }}"
                            class="btn btn-danger my-2 my-sm-0">Удалить</a>
                     </div>
                     <div class="card-footer">
@@ -49,12 +53,16 @@
                          alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">{{$engin->engin_short_title}}</h5>
-                        <a href="{{ route('engin.show', ['id' => $engin->engin_id]) }}"
+                        <a href="{{ route('engin.show', ['id' => $engin->engin_id, app()->getLocale()]) }}"
                            class="btn btn-info my-2 my-sm-0">Подробнее</a>
-                        <a href="{{ route('engin.edit', ['id' => $engin->engin_id]) }}"
+                        <a href="{{ route('engin.edit', ['id' => $engin->engin_id, app()->getLocale()]) }}"
                            class="btn btn-success my-2 my-sm-0">Редактировать</a>
-                        <a href="{{ route('engin.edit', ['id' => $engin->engin_id]) }}"
-                           class="btn btn-danger my-2 my-sm-0">Удалить</a>
+                        <form action="{{route('engin.delete',['id'=>$engin->engin_id, app()->getLocale()])}}"
+                              method="post">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit" value="Удалить" class="btn btn-danger my-2 my-sm-0">
+                        </form>
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Created {{$engin->created_at}}</small>

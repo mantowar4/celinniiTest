@@ -1,7 +1,7 @@
 @extends('adminpanel')
 
 @section('create')
-    <form action="{{route('news.store')}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('news.store',app()->getLocale())}}" method="post" enctype="multipart/form-data">
         @csrf
         <h3>Добавить запись в 'Новости'</h3>
         <div class="form-group">

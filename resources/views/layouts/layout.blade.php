@@ -90,7 +90,7 @@
         </div>
     </nav>
 </section>--->
-<nav class="navbar navbar-expand-sm   navbar-light bg-light">
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,47 +100,83 @@
         <div class="navbar-menu collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('main.index')}}">Главная<span class="sr-only">(current)</span></a>
+                    <a class="nav-link"
+                       href="{{ route('main.index',app()->getLocale()) }}">{{__('layouttext.mainlink')}}<span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('news.index')}}">Новости</a>
+                    <a class="nav-link"
+                       href="{{route('news.index', app()->getLocale())}}">{{__('layouttext.newslink')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('articles.index')}}">Публикации</a>
+                    <a class="nav-link"
+                       href="{{route('articles.index', app()->getLocale())}}">{{__('layouttext.articleslink')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('engin.index')}}">Разработки</a>
+                    <a class="nav-link"
+                       href="{{route('engin.index', app()->getLocale())}}">{{__('layouttext.enginslink')}}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('org.show',['id'=>8])}}">Испытания</a>
+                    <a class="nav-link"
+                       href="{{route('org.show',['id'=>8, app()->getLocale()])}}">{{__('layouttext.testinglink')}}</a>
                 </li>
                 <li class="nav-item dropdown dmenu">
                     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                        О нас
+                        {{__('layouttext.aboutlink')}}
                     </a>
                     <div class="dropdown-menu sm-menu">
-                        <a class="dropdown-item" href="{{route('working.index')}}">Деятельность</a>
-                        <a class="dropdown-item" href="{{route('history.index')}}">История</a>
-                        <a class="dropdown-item" href="{{route('org.index')}}">Структура</a>
-                        <a class="dropdown-item" href="{{route('management.index')}}">Руководство</a>
-                        <a class="dropdown-item" href="{{route('contacts.index')}}">Контакты</a>
+                        <a class="dropdown-item"
+                           href="{{route('working.index', app()->getLocale())}}">{{__('layouttext.workinglink')}}</a>
+                        <a class="dropdown-item"
+                           href="{{route('history.index', app()->getLocale())}}">{{__('layouttext.historylink')}}</a>
+                        <a class="dropdown-item"
+                           href="{{route('org.index', app()->getLocale())}}">{{__('layouttext.struclink')}}</a>
+                        <a class="dropdown-item"
+                           href="{{route('management.index', app()->getLocale())}}">{{__('layouttext.managerslink')}}</a>
+                        <a class="dropdown-item"
+                           href="{{route('contacts.index', app()->getLocale())}}">{{__('layouttext.contactlink')}}</a>
                     </div>
                 </li>
             </ul>
             <div>
-                <form class="search" action="{{route('posts.search')}}">
-                    <input name="search" type="search" class="searchTerm" placeholder="Поиск..." required>
+                <form class="search" action="{{route('posts.search', app()->getLocale())}}">
+                    <input name="search" type="search" class="searchTerm" placeholder="{{__('layouttext.search')}}"
+                           required>
                     <button type="submit" class="searchButton">
                         <i class="ri-search-line" style="color: gray"></i>
                     </button>
                 </form>
             </div>
+            <!---
             <div class="social-part">
                 <a href="mailto:celinnii@mail.ru"><i class="sn ri-mail-line" aria-hidden="true"></i></a>
                 <a href="#"><i class="sn ri-instagram-line" aria-hidden="true"></i></a>
                 <a href="https://www.youtube.com/channel/UCPGT2pBWkYotQaGsjwykcuA" target="_blank"><i
                         class="sn ri-youtube-line" aria-hidden="true"></i></a>
             </div>
+            --->
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('engin.index', app()->getLocale())}}"><i class="sn ri-mail-line"
+                                                                                               aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('engin.index', app()->getLocale())}}"><i
+                            class="sn ri-instagram-line"
+                            aria-hidden="true"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('engin.index', app()->getLocale())}}"><i
+                            class="sn ri-youtube-line" aria-hidden="true"></i></a>
+                </li>
+                @foreach (config('app.available_locales') as $locale)
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="{{ route('lang.change',$locale) }}"
+                           @if (app()->getLocale() == $locale) style="font-weight: bold; text-decoration: underline" @endif>{{ strtoupper($locale) }}</a>
+                    </li>
+                @endforeach
+            </ul>
         </div>
     </div>
 </nav>
@@ -154,12 +190,13 @@
             <aside class="col-lg-4 side-bar col-md-12">
                 <ul class="nav nav-tabs" role="tablist" id="myTab">
                     <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home"
-                                            role="tab">Новости</a>
+                                            role="tab">{{__('layouttext.newslink')}}</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile" role="tab">Статьи</a>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile"
+                                            role="tab">{{__('layouttext.articleslink')}}</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages"
-                                            role="tab">Разработки</a>
+                                            role="tab">{{__('layouttext.enginslink')}}</a>
                     </li>
                 </ul>
                 <!-- Tab panes -->
@@ -169,14 +206,15 @@
 
                         @else
                             <div class="media">
-                                <a href="{{ route('news.show', ['id' => $lastnews[0]->news_id]) }}"> <img
+                                <a href="{{ route('news.show', [app()->getLocale(), 'id' => $lastnews[0]->news_id]) }}">
+                                    <img
                                         class="d-flex mr-3"
                                         src="{{ $lastnews[0]->news_img ?? asset('img/default-img.jpg')}}"
                                         alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('news.show', ['id' => $lastnews[0]->news_id]) }}">{{$lastnews[0]->news_short_title}}</a>
+                                                href="{{ route('news.show', ['id' => $lastnews[0]->news_id, app()->getLocale()]) }}">{{$lastnews[0]->news_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -186,32 +224,35 @@
                         @if(empty($lastnews[1]))
 
                         @else
-                            <div class="media"><a href="{{ route('news.show', ['id' => $lastnews[1]->news_id]) }}"> <img
+                            <div class="media"><a
+                                    href="{{ route('news.show', [app()->getLocale(), 'id' => $lastnews[1]->news_id]) }}">
+                                    <img
                                         class="d-flex mr-3"
                                         src="{{ $lastnews[1]->news_img ?? asset('img/default-img.jpg')}}"
                                         alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('news.show', ['id' => $lastnews[1]->news_id]) }}">{{$lastnews[1]->news_short_title}}</a>
+                                                href="{{ route('news.show', [app()->getLocale(), 'id' => $lastnews[1]->news_id]) }}">{{$lastnews[1]->news_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
                                 </div>
                             </div>
                         @endif
-                        @if(empty($lastnews[1]))
+                        @if(empty($lastnews[2]))
 
                         @else
                             <div class="media">
-                                <a href="{{ route('news.show', ['id' => $lastnews[2]->news_id]) }}"> <img
+                                <a href="{{ route('news.show',[app()->getLocale(), 'id' => $lastnews[2]->news_id]) }}">
+                                    <img
                                         class="d-flex mr-3"
                                         src="{{$lastnews[2]->news_img ?? asset('img/default-img.jpg')}}"
                                         alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('news.show', ['id' => $lastnews[2]->news_id]) }}">{{$lastnews[2]->news_short_title}}</a>
+                                                href="{{ route('news.show',[app()->getLocale(), 'id' => $lastnews[2]->news_id]) }}">{{$lastnews[2]->news_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -223,13 +264,15 @@
                         @if(empty($lastposts[0]))
 
                         @else
-                            <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                                 src="{{$lastposts[0]->post_img ?? asset('img/default-img.jpg')}}"
-                                                                 alt="Generic placeholder image"></a>
+                            <div class="media"><a
+                                    href="{{ route('articles.show', ['id' => $lastposts[0]->post_id, app()->getLocale()]) }}">
+                                    <img class="d-flex mr-3"
+                                         src="{{$lastposts[0]->post_img ?? asset('img/default-img.jpg')}}"
+                                         alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('articles.show', ['id' => $lastposts[0]->post_id]) }}">{{$lastposts[0]->post_short_title}}</a>
+                                                href="{{ route('articles.show', ['id' => $lastposts[0]->post_id, app()->getLocale()]) }}">{{$lastposts[0]->post_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -239,13 +282,15 @@
                         @if(empty($lastposts[1]))
 
                         @else
-                            <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                                 src="{{$lastposts[1]->post_img ?? asset('img/default-img.jpg')}}"
-                                                                 alt="Generic placeholder image"></a>
+                            <div class="media"><a
+                                    href="{{ route('articles.show', ['id' => $lastposts[1]->post_id, app()->getLocale()]) }}">
+                                    <img class="d-flex mr-3"
+                                         src="{{$lastposts[1]->post_img ?? asset('img/default-img.jpg')}}"
+                                         alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('articles.show', ['id' => $lastposts[1]->post_id]) }}">{{$lastposts[1]->post_short_title}}</a>
+                                                href="{{ route('articles.show', ['id' => $lastposts[1]->post_id, app()->getLocale()]) }}">{{$lastposts[1]->post_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -255,13 +300,15 @@
                         @if(empty($lastposts[2]))
 
                         @else
-                            <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                                 src="{{$lastposts[2]->post_img ?? asset('img/default-img.jpg')}}"
-                                                                 alt="Generic placeholder image"></a>
+                            <div class="media"><a
+                                    href="{{ route('articles.show', ['id' => $lastposts[2]->post_id, app()->getLocale()]) }}">
+                                    <img class="d-flex mr-3"
+                                         src="{{$lastposts[2]->post_img ?? asset('img/default-img.jpg')}}"
+                                         alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('articles.show', ['id' => $lastposts[2]->post_id]) }}">{{$lastposts[2]->post_short_title}}</a>
+                                                href="{{ route('articles.show', ['id' => $lastposts[2]->post_id, app()->getLocale()]) }}">{{$lastposts[2]->post_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -273,13 +320,15 @@
                         @if(empty($lastengins[0]))
 
                         @else
-                            <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                                 src="{{$lastengins[0]->engin_img ?? asset('img/default-img.jpg')}}"
-                                                                 alt="Generic placeholder image"></a>
+                            <div class="media"><a
+                                    href="{{ route('engin.show', ['id' => $lastengins[0]->engin_id, app()->getLocale()]) }}">
+                                    <img class="d-flex mr-3"
+                                         src="{{$lastengins[0]->engin_img ?? asset('img/default-img.jpg')}}"
+                                         alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('engin.show', ['id' => $lastengins[0]->engin_id]) }}">{{$lastengins[0]->engin_short_title}}</a>
+                                                href="{{ route('engin.show', ['id' => $lastengins[0]->engin_id, app()->getLocale()]) }}">{{$lastengins[0]->engin_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -289,13 +338,15 @@
                         @if(empty($lastengins[1]))
 
                         @else
-                            <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                                 src="{{$lastengins[1]->engin_img ?? asset('img/default-img.jpg')}}"
-                                                                 alt="Generic placeholder image"></a>
+                            <div class="media"><a
+                                    href="{{ route('engin.show', ['id' => $lastengins[1]->engin_id, app()->getLocale()]) }}">
+                                    <img class="d-flex mr-3"
+                                         src="{{$lastengins[1]->engin_img ?? asset('img/default-img.jpg')}}"
+                                         alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('engin.show', ['id' => $lastengins[1]->engin_id]) }}">{{$lastengins[1]->engin_short_title}}</a>
+                                                href="{{ route('engin.show', ['id' => $lastengins[1]->engin_id, app()->getLocale()]) }}">{{$lastengins[1]->engin_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -305,13 +356,15 @@
                         @if(empty($lastengins[2]))
 
                         @else
-                            <div class="media"><a href="#"> <img class="d-flex mr-3"
-                                                                 src="{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
-                                                                 alt="Generic placeholder image"></a>
+                            <div class="media"><a
+                                    href="{{ route('engin.show', ['id' => $lastengins[2]->engin_id, app()->getLocale()]) }}">
+                                    <img class="d-flex mr-3"
+                                         src="{{$lastengins[2]->engin_img ?? asset('img/default-img.jpg')}}"
+                                         alt="Generic placeholder image"></a>
                                 <div class="media-body">
                                     <div class="news-title">
                                         <h2 class="title-small"><a
-                                                href="{{ route('engin.show', ['id' => $lastengins[2]->engin_id]) }}">{{$lastengins[2]->engin_short_title}}</a>
+                                                href="{{ route('engin.show', ['id' => $lastengins[2]->engin_id, app()->getLocale()]) }}">{{$lastengins[2]->engin_short_title}}</a>
                                         </h2>
                                     </div>
                                     <div class="news-auther"><span class="time">1h ago</span></div>
@@ -322,7 +375,7 @@
                     </div>
                 </div>
                 <div class="video-sec">
-                    <h4 class="heading-small">Видеопрезентация</h4>
+                    <h4 class="heading-small">{{__('layouttext.videolink')}}</h4>
                     <div class="video-block">
                         <div class="embed-responsive embed-responsive-4by3">
                             <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"
@@ -377,9 +430,9 @@
                     <div class="row">
                         <div class="col-md-3 footer-about wow fadeInUp animated"
                              style="visibility: visible; animation-name: fadeInUp;">
-                            <h3>О центре</h3>
+                            <h3>{{__('layouttext.about')}}</h3>
                             <p>
-                                Научно-производственный центр Агроинженерии. Костанайский филиал.
+                                {{__('layouttext.aboutcentr')}}
                             </p>
                             <p>© 2012-2020 Celinnii.kz</p>
                             <div class="row">
@@ -392,9 +445,8 @@
                         </div>
                         <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown animated"
                              style="visibility: visible; animation-name: fadeInDown;">
-                            <h3>Контакты</h3>
-                            <p><i class="sn ri-map-pin-2-line"></i> Адрес: 110011, Республика Казахстан, г.Костанай,
-                                пр.Абая, 34</p>
+                            <h3>{{__('layouttext.contactlink')}}</h3>
+                            <p><i class="sn ri-map-pin-2-line"></i> {{__('layouttext.adress')}}</p>
                             <p><i class="sn ri-phone-line"></i> <a href="tel:+">+7 (7142) 55-81-46</a></p>
                             <p><i class="sn ri-mail-line"></i> Email: <a
                                     href="mailto:celinnii@mail.ru">celinnii@mail.ru</a>
@@ -404,19 +456,31 @@
                              style="visibility: visible; animation-name: fadeInUp;">
                             <div class="row">
                                 <div class="col">
-                                    <h3>Links</h3>
+                                    <h3>{{__('layouttext.navlink')}}</h3>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p><a class="scroll-link" href="{{route('main.index')}}">Главная</a></p>
-                                    <p><a href="{{route('news.index')}}">Новости</a></p>
-                                    <p><a href="{{route('articles.index')}}">Публикации</a></p>
-                                    <p><a href="{{route('engin.index')}}">Разработки</a></p>
+                                    <p><a class="scroll-link"
+                                          href="{{route('main.index', app()->getLocale())}}">{{__('layouttext.mainlink')}}</a>
+                                    </p>
+                                    <p>
+                                        <a href="{{route('news.index', app()->getLocale())}}">{{__('layouttext.newslink')}}</a>
+                                    </p>
+                                    <p>
+                                        <a href="{{route('articles.index', app()->getLocale())}}">{{__('layouttext.articleslink')}}</a>
+                                    </p>
+                                    <p>
+                                        <a href="{{route('engin.index', app()->getLocale())}}">{{__('layouttext.enginslink')}}</a>
+                                    </p>
                                 </div>
                                 <div class="col-md-6">
-                                    <p><a href="{{route('org.index')}}">Структура</a></p>
-                                    <p><a href="{{route('management.index')}}">Руководство</a></p>
+                                    <p>
+                                        <a href="{{route('org.index', app()->getLocale())}}">{{__('layouttext.struclink')}}</a>
+                                    </p>
+                                    <p>
+                                        <a href="{{route('management.index', app()->getLocale())}}">{{__('layouttext.managerslink')}}</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>

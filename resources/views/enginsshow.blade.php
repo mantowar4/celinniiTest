@@ -27,7 +27,7 @@
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Created {{$engin->created_at}}</small>
-                        <a href="{{route('engin.index')}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все
+                        <a href="{{route('engin.index',app()->getLocale())}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все
                             новости.</a>
                     </div>
                 </div>

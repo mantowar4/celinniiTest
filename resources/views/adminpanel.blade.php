@@ -27,30 +27,37 @@
 
                 <!-- Authentication Links -->
                 <ul class="navbar-nav ml-auto">
+                    @foreach (config('app.available_locales') as $locale)
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), $locale) }}"
+                               @if (app()->getLocale() == $locale) style="font-weight: bold; text-decoration: underline" @endif>{{ strtoupper($locale) }}</a>
+                        </li>
+                    @endforeach
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('main.index') }}">{{ __('Вернуться на сайт') }}</a>
+                        <a class="nav-link" href="{{ route('main.index',app()->getLocale()) }}">{{ __('Вернуться на сайт') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">{{ __('Войти') }}</a>
+                        <a class="nav-link" href="{{ route('login',app()->getLocale()) }}">{{ __('Войти') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register',app()->getLocale()) }}">{{ __('Register') }}</a>
                         </li>
                     @endif
-                    @else
+        @else
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('main.index')}}">Главная<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{route('main.index',app()->getLocale())}}">Главная<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('news.create')}}">Новая новость</a>
+                                <a class="nav-link" href="{{route('news.create',app()->getLocale())}}">Новая новость</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('articles.create')}}">Новая публикация</a>
+                                <a class="nav-link" href="{{route('articles.create',app()->getLocale())}}">Новая публикация</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('engin.create')}}">Новая разработка</a>
+                                <a class="nav-link" href="{{route('engin.create',app()->getLocale())}}">Новая разработка</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Новое испытание</a>
@@ -63,13 +70,13 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                <a class="dropdown-item" href="{{ route('logout',app()->getLocale()) }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Выйти') }}
                                 </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                <form id="logout-form" action="{{ route('logout',app()->getLocale()) }}" method="POST"
                                       style="display: none;">
                                     @csrf
                                 </form>
@@ -89,8 +96,8 @@
         </div>
     @endif
     @yield('create')
-
         @endguest
+
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

@@ -1,7 +1,7 @@
 @extends('adminpanel')
 
 @section('create')
-    <form action="{{route('news.update', ['id'=>$new->news_id])}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('news.update', ['id'=>$new->news_id,app()->getLocale()])}}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
         <h3>Редактировать запись в 'Новости'</h3>

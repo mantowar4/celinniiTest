@@ -19,7 +19,7 @@
                     </div>
                     <div class="card-footer">
                         <small class="text-muted">Created {{$new->created_at}}</small>
-                        <a href="{{route('news.index')}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все новости.</a>
+                        <a href="{{route('news.index',app()->getLocale())}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все новости.</a>
                     </div>
                 </div>
             </div>

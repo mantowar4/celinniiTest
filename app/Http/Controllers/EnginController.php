@@ -122,6 +122,12 @@ class EnginController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $engine = Engin::find($id)->First();
+
+        if ($engine != null) {
+            $engine->delete();
+            return redirect()->route('adminpanel',app()->getLocale())->with('success','Запись успешно удалена!');
+        }
+        return redirect()->route('adminpanel',app()->getLocale())->with('success','Запись не найдена!');
     }
 }

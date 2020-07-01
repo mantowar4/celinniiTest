@@ -64,7 +64,7 @@ class NewsController extends Controller
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -79,14 +79,14 @@ class NewsController extends Controller
             $new->news_img = $url;
         }
         $new -> save();
-        return redirect()->route('adminpanel')->with('success','Запись успешно добавлена!');
+        return redirect()->route('adminpanel',app()->getLocale())->with('success','Запись успешно добавлена!');
     }
 
     /**
      * Display the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function show($id)
     {
@@ -141,6 +141,12 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $new = News::find($id)->First();
+
+        if ($new != null) {
+            $new->delete();
+            return redirect()->route('adminpanel',app()->getLocale())->with('success','Запись успешно удалена!');
+        }
+        return redirect()->route('adminpanel',app()->getLocale())->with('success','Запись не найдена!');
     }
 }

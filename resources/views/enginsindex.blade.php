@@ -8,7 +8,7 @@
                 <p class="lead">Всего найдено {{count($news)}} записей</p>
             @else
                 <h2>По запросу "<?=$_GET['search']?>" ничего не найдено.</h2>
-                <a href="{{route('news.index')}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все новости.</a>
+                <a href="{{route('news.index',app()->getLocale())}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все новости.</a>
             @endif
         @endif
 
@@ -19,7 +19,7 @@
                         <img class="card-img-top" src="{{ $engin->engin_img ?? asset('img/default-img.jpg')}}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{$engin->engin_short_title}}</h5>
-                            <a href="{{ route('engin.show', ['id' => $engin->engin_id]) }}" class="btn btn-info my-2 my-sm-0">Подробнее</a>
+                            <a href="{{ route('engin.show', ['id' => $engin->engin_id,app()->getLocale()]) }}" class="btn btn-info my-2 my-sm-0">Подробнее</a>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">Created {{$engin->created_at}}</small>

@@ -75,65 +75,52 @@
         <h3 class="heading-large" style="text-align: center;">Направление работы</h3>
         <div class="Checklist">
             <ul>
-                <li><i class="ri-check-double-line"></i>прикладные и опытно-конструкторские работы в отраслях
-                    растениеводства и животноводства
+                <li><i class="ri-check-double-line"></i>{{__('mainpage.wbranch1')}}
                 </li>
-                <li><i class="ri-check-double-line"></i>разработка и реализация методов формирования оптимальных
-                    структур
-                    и составов технологических
-                    комплексов машин и правил эффективного их использования в зональных условиях
+                <li><i class="ri-check-double-line"></i>{{__('mainpage.wbranch2')}}
                 </li>
-                <li><i class="ri-check-double-line"></i>разработка и внедрение ресурсосберегающих технологий и
-                    технических средств для
-                    сельскохозяйственного производства
+                <li><i class="ri-check-double-line"></i>{{__('mainpage.wbranch3')}}
                 </li>
-                <li><i class="ri-check-double-line"></i>создание и мелкосерийное производство сельскохозяйственных
-                    машин, орудий и оборудования
+                <li><i class="ri-check-double-line"></i>{{__('mainpage.wbranch4')}}
                 </li>
-                <li><i class="ri-check-double-line"></i>проведение сертификационных, приемочных и других видов испытаний
-                    новой зарубежной и отечественной сельскохозяйственной техники и ее адаптация к
-                    почвенно-климатическим условиям региона
+                <li><i class="ri-check-double-line"></i>{{__('mainpage.wbranch5')}}
                 </li>
-                <li><i class="ri-check-double-line"></i>разработка стандартов, нормативных документов на методы
-                    испытаний сельскохозяйственной техники
+                <li><i class="ri-check-double-line"></i>{{__('mainpage.wbranch6')}}
                 </li>
-                <li><i class="ri-check-double-line"></i>повышение квалификации инженерных кадров АПК
+                <li><i class="ri-check-double-line"></i>{{__('mainpage.wbranch7')}}
                 </li>
             </ul>
         </div>
-        <h3 class="heading-large" style="text-align: center;">Научно-производственная база</h3>
+        <h3 class="heading-large" style="text-align: center;">{{__('mainpage.scincebase')}}</h3>
         <div>
             <p style="text-align: center;">
-                Структурными подразделениями института являются:
+                {{__('mainpage.struct')}}
             </p>
         </div>
         <div class="row">
             <div class="col-md-5 order-1 order-md-2">
-                <img src="http://celinnii.kz/images/f2.jpg" class="img-fluid" alt="">
+                <img src="http://celinnii.kz/images/f2.jpg" class="img-fluid rounded" alt="">
             </div>
             <div class="col-md-7 order-2 order-md-1 Checklist">
                 <ul>
-                    <li><i class="ri-check-double-line"></i>пять научных лабораторий
+                    <li><i class="ri-check-double-line"></i>{{__('mainpage.struct1')}}
                     </li>
-                    <li><i class="ri-check-double-line"></i>конструкторское бюро
+                    <li><i class="ri-check-double-line"></i>{{__('mainpage.struct2')}}
                     </li>
-                    <li><i class="ri-check-double-line"></i>лаборатория испытаний и сертификации техники
+                    <li><i class="ri-check-double-line"></i>{{__('mainpage.struct3')}}
                     </li>
-                    <li><i class="ri-check-double-line"></i>научно-техническая библиотека с патентным фондом
+                    <li><i class="ri-check-double-line"></i>{{__('mainpage.struct4')}}
                     </li>
-                    <li><i class="ri-check-double-line"></i>экспериментальное производство
+                    <li><i class="ri-check-double-line"></i>{{__('mainpage.struct5')}}
                     </li>
-                    <li><i class="ri-check-double-line"></i>автотракторный парк
+                    <li><i class="ri-check-double-line"></i>{{__('mainpage.struct6')}}
                     </li>
                 </ul>
             </div>
         </div>
         <div>
             <p style="text-align: center;">
-                В составе имеются необходимые структуры для организационного
-                обеспечения научных исследований полного цикла – от проведения литературного и патентного
-                поиска до внедрения в производство разработанных машин, орудий и оборудования. Занимаемая
-                институтом площадь составляет 6,8 га, общая площадь зданий 22 тыс. м2.
+                {{__('mainpage.text1')}}
             </p>
         </div>
         <div class="row">
@@ -142,11 +129,7 @@
             </div>
             <div class="col-md-7">
                 <p class="font-italic">
-                    Количество работающих в институте составляет 100 человек, в том числе 20 научных
-                    сотрудников, из них два доктора технических наук, шесть кандидатов технических наук, один
-                    доктор PhD и десять магистров сельскохозяйственных наук. За годы работы института
-                    разработаны свыше ста наименований машин и оборудования. На научные разработки получено в
-                    общей сложности около 400 авторских свидетельств и патентов.
+                    {{__('mainpage.text2')}}
                 </p>
             </div>
         </div>

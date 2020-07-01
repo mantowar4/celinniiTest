@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use MongoDB\Driver\Session;
 
 class MainController extends Controller
 {
@@ -13,9 +14,8 @@ class MainController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {/*
+    {
         $news = DB::table('news')->orderBy('news.created_at','desc')->first();
-    */
         $lastnews = DB::table('news')->orderBy('news.created_at','desc')->limit(3)->get();
         $lastposts = DB::table('posts')->orderBy('posts.created_at','desc')->limit(3)->get();
         $lastengins = DB::table('engins')->orderBy('engins.created_at','desc')->limit(3)->get();

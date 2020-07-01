@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\News;
 use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -119,6 +120,12 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id)->First();
+
+        if ($post != null) {
+            $post->delete();
+            return redirect()->route('adminpanel',app()->getLocale())->with('success','Запись успешно удалена!');
+        }
+        return redirect()->route('adminpanel',app()->getLocale())->with('success','Запись не найдена!');
     }
 }
