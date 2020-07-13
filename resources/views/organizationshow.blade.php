@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout', ['title'=>'Структура'])
 
 @section('content')
 
@@ -271,7 +271,7 @@
         @elseif ($id==8)
             <div class="row">
                 <div class="col-3">
-                    <img src="{{asset('img/11.jpg')}}" class="img-fluid">
+                    <img src="{{asset('img/11.png')}}" class="img-fluid">
                 </div>
                 <div class="col-6" style="margin: auto">
                     <h6 class="mb-0 text-truncated text-center ml-auto mt-auto">ИСПЫТАТЕЛЬНАЯ ЛАБОРАТОРИЯ КОСТАНАЙСКОГО
@@ -279,7 +279,7 @@
                         «ТОО НАУЧНО-ПРОИЗВОДСТВЕННЫЙ ЦЕНТР АГРОИНЖЕНЕРИИ»</h6>
                 </div>
                 <div class="col-3">
-                    <img src="{{asset('img/222.jpg')}}" class="img-fluid">
+                    <img src="{{asset('img/222.png')}}" class="img-fluid">
                 </div>
             </div>
             <div class="row">
@@ -458,7 +458,7 @@
             </p>
             <p style="text-align: center">
                 Перечень сельскохозяйственной техники, прошедшей испытания
-                представлен <a href="{{asset('docs/ispitaniya.pdf')}}" >здесь</a>
+                представлен <a href="{{asset('docs/ispitaniya.pdf')}}" target="_blank">здесь</a>
             </p>
         @endif
     </main>

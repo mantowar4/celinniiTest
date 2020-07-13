@@ -1,4 +1,4 @@
-@extends('adminpanel')
+@extends('adminpanel', ['title'=>'Новая новость'])
 
 @section('create')
     <form action="{{route('news.store',app()->getLocale())}}" method="post" enctype="multipart/form-data">

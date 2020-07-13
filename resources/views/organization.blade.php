@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout', ['title'=>'Структура'])
 
 @section('content')
 
@@ -23,28 +23,28 @@
                                 @endforeach
                                     -->
                                     <li class="leaf">
-                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>1,app()->getLocale()])}}">Лаборатория механизированных технологий</a></div>
+                                        <div class="nodecontent node-link"><a href="{{route('org.show',['id'=>1,app()->getLocale()])}}">Лаборатория механизированных технологий</a></div>
                                     </li>
                                     <li class="leaf">
-                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>2,app()->getLocale()])}}">Лаборатория разработки комбинированных орудий</a></div>
+                                        <div class="nodecontent node-link"><a href="{{route('org.show',['id'=>2,app()->getLocale()])}}">Лаборатория разработки комбинированных орудий</a></div>
                                     </li>
                                     <li class="leaf">
-                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>3,app()->getLocale()])}}">Лаборатория механизации послеуборочной обработки зерна</a></div>
+                                        <div class="nodecontent node-link"><a href="{{route('org.show',['id'=>3,app()->getLocale()])}}">Лаборатория механизации послеуборочной обработки зерна</a></div>
                                     </li>
                                     <li class="leaf">
-                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>4,app()->getLocale()])}}">Лаборатория использования машинно-тракторного парка</a></div>
+                                        <div class="nodecontent node-link"><a href="{{route('org.show',['id'=>4,app()->getLocale()])}}">Лаборатория использования машинно-тракторного парка</a></div>
                                     </li>
                                     <li class="leaf">
-                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>5,app()->getLocale()])}}">Лаборатория механизации возделывания и уборки кормовых культур</a></div>
+                                        <div class="nodecontent node-link"><a href="{{route('org.show',['id'=>5,app()->getLocale()])}}">Лаборатория механизации возделывания и уборки кормовых культур</a></div>
                                     </li>
                                     <li class="leaf">
-                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>6,app()->getLocale()])}}">Конструкторное бюро</a></div>
+                                        <div class="nodecontent node-link"><a href="{{route('org.show',['id'=>6,app()->getLocale()])}}">Конструкторное бюро</a></div>
                                     </li>
                                     <li class="leaf">
-                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>7,app()->getLocale()])}}">Лаборатория механизации обработки почвы</a></div>
+                                        <div class="nodecontent node-link"><a href="{{route('org.show',['id'=>7,app()->getLocale()])}}">Лаборатория механизации обработки почвы</a></div>
                                     </li>
                                     <li class="leaf">
-                                        <div class="nodecontent"><a href="{{route('org.show',['id'=>8,app()->getLocale()])}}">Центр испытания и сертификации сельскохозяйственной техники</a></div>
+                                        <div class="nodecontent node-link"><a href="{{route('org.show',['id'=>8,app()->getLocale()])}}">Центр испытания и сертификации сельскохозяйственной техники</a></div>
                                     </li>
                                 </ul>
                             </li>

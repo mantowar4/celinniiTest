@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout', ['title'=>'История'])
 
 @section('content')
 
@@ -71,11 +71,10 @@
             приборами. Это позволит в конечном счете повысить качество и конкурентоспособность
             разрабатываемых учеными и выпускаемых опытно-механическим заводом машин.
         </p>
-        <div>
-            <img src="/img/50let.jpg" alt="Становление и развитие игроинженерии">
+        <div class="container">
+            <img src="/img/50let.jpg" alt="Становление и развитие игроинженерии" class="component-center">
+            <a href="/docs/let50.pdf" target="_blank" class="link-center">Читать</a>
         </div>
-        <p class="m-auto"><a href="/docs/let50.pdf">Читать</a>
-        </p>
     </main>
 
 @endsection

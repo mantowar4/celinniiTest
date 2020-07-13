@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>НПЦ Агроинженерии</title>
+    <title>{{$title}}</title>
     <script src="{{asset('js/textboxio.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
@@ -35,32 +35,48 @@
                         </li>
                     @endforeach
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('main.index',app()->getLocale()) }}">{{ __('Вернуться на сайт') }}</a>
+                        <a class="nav-link"
+                           href="{{ route('main.index',app()->getLocale()) }}">{{ __('Вернуться на сайт') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login',app()->getLocale()) }}">{{ __('Войти') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('register',app()->getLocale()) }}">{{ __('Register') }}</a>
+                            <a class="nav-link"
+                               href="{{ route('register',app()->getLocale()) }}">{{ __('Register') }}</a>
                         </li>
                     @endif
-        @else
+                    @else
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('main.index',app()->getLocale())}}">Главная<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="{{route('main.index',app()->getLocale())}}">Главная<span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item dropdown dmenu">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                    Создать
+                                </a>
+                                <div class="dropdown-menu sm-menu">
+                                    <a class="dropdown-item"
+                                       href="{{route('news.create',app()->getLocale())}}">Новость</a>
+                                    <a class="dropdown-item"
+                                       href="{{route('articles.create',app()->getLocale())}}">Статью</a>
+                                    <a class="dropdown-item"
+                                       href="{{route('engin.create',app()->getLocale())}}">Разработку</a>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('news.create',app()->getLocale())}}">Новая новость</a>
+                                <a class="nav-link" href="#">Обновить испытания</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('articles.create',app()->getLocale())}}">Новая публикация</a>
+                                <a class="nav-link" href="{{route('news.admin.index')}}">Список новостей</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('engin.create',app()->getLocale())}}">Новая разработка</a>
+                                <a class="nav-link" href="{{route('posts.admin.index')}}">Список статей</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Новое испытание</a>
+                                <a class="nav-link" href="{{route('engins.admin.index')}}">Список разработок</a>
                             </li>
                         </ul>
                         <li class="nav-item dropdown">
@@ -87,6 +103,16 @@
     </div>
 </nav>
 <div class="container">
+    @if($errors->any())
+        @foreach($errors->all() as $error)
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{$error}}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endforeach
+    @endif
     @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{session('success')}}
@@ -96,7 +122,7 @@
         </div>
     @endif
     @yield('create')
-        @endguest
+    @endguest
 
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"

@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout', ['title'=>'НПЦ Агроинженерии'])
 
 @section('head')
     <section id="hero">

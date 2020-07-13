@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>НПЦ Агроинженерии</title>
+    <title>{{$title}}</title>
     <script src="{{asset('js/textboxio.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
@@ -394,12 +394,16 @@
 
             <div class="row">
 
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="{{asset('img/logo1.png')}}" class="img-fluid" alt="">
+
+                <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <a href="http://www.spcae.kz" target="_blank"><img src="{{asset('img/spcaeLogo.png')}}" class="img-fluid" alt="ТОО «НПЦ агроинженерии»"></a>
                 </div>
 
-                <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <img src="{{asset('img/logo2.png')}}" class="img-fluid" alt="">
+                <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <a href="http://nasec.kz/ru" target="_blank"><img src="{{asset('img/nasecLogo.png')}}" class="img-fluid" alt="НАО «НАНОЦ»"></a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                    <a href="https://www.gov.kz/memleket/entities/moa?lang=ru" target="_blank"><img src="{{asset('img/gerb.png')}}" class="img-fluid" alt="Министерство сельского хозяйства"></a>
                 </div>
                 <!--
                                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">

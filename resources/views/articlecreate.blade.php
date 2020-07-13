@@ -1,4 +1,4 @@
-@extends('adminpanel')
+@extends('adminpanel', ['title'=>'Новая статья'])
 
 @section('create')
     <form action="{{route('articles.store',app()->getLocale())}}" method="post" enctype="multipart/form-data">
@@ -6,11 +6,12 @@
         <h3>Добавить запись в 'Статьи'</h3>
         <div class="form-group">
             <p>Заголовок</p>
-            <input name="title" type="text" class="form-control" required>
+            <input name="title" type="text" class="form-control" value="{{ old('title') ?? $post->post_title ?? '' }}" >
         </div>
         <div class="form-group">
             <p>Текст статьи</p>
-            <textarea name="description" rows="10" class="form-control" id="textbox" required>
+            <textarea name="description" rows="10" class="form-control" id="textbox">
+                {{ old('description') ?? $post->post_description ?? '' }}
             </textarea>
         </div>
         <div class="form-group">

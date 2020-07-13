@@ -62,6 +62,9 @@ Route::group([
     Auth::routes();
 
     Route::get('/adminpanel', 'AdminController@index')->name('adminpanel');
+    Route::get('/adminpanel/engins', 'AdminListController@showEngins')->name('engins.admin.index');
+    Route::get('/adminpanel/posts', 'AdminListController@showPosts')->name('posts.admin.index');
+    Route::get('/adminpanel/news', 'AdminListController@showNews')->name('news.admin.index');
 
     Route::get('setlocale/{locale}', function ($locale) {
         if (in_array($locale, \Illuminate\Support\Facades\Config::get('app.locales'))) {

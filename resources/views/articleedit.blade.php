@@ -1,4 +1,4 @@
-@extends('adminpanel')
+@extends('adminpanel', ['title'=>"Редактирование статьи $post->post_title"])
 
 @section('create')
     <form action="{{route('articles.update', ['id'=>$post->post_id,app()->getLocale()])}}" method="post" enctype="multipart/form-data">

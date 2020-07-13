@@ -1,4 +1,4 @@
-@extends('adminpanel')
+@extends('adminpanel', ['title'=>'Новая разработка'])
 
 @section('create')
     <form action="{{route('engin.store',app()->getLocale())}}" method="post" enctype="multipart/form-data">

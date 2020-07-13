@@ -1,4 +1,4 @@
-@extends('adminpanel')
+@extends('adminpanel', ['title'=>"Редактирование разработки $engin->engine_title"])
 
 @section('create')
     <form action="{{route('news.update', ['id'=>$engin->engin_id,app()->getLocale()])}}" method="post" enctype="multipart/form-data">

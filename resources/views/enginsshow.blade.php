@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout', ['title'=>"$engin->engin_title"])
 
 @section('content')
     <div class="container">
