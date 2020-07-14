@@ -3,7 +3,8 @@
 @section('content')
     <div class="container">
         @if(isset($_GET['search']))
-            @if(count($news)>0)
+            <!---
+                @if(count($news)>0)
                 <h2>Результаты поиска по запросу "<?=$_GET['search']?>" </h2>
                 <p class="lead">Всего найдено {{count($news)+count($engins)+count($posts)}} записей</p>
             @else
@@ -69,6 +70,7 @@
                     @endforeach
                 @endif
             </div>
+            --->
         @else
             <div class="card-group">
                 @foreach($news as $new)
