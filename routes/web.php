@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect()->route('main.index', app()->getLocale());
 });
-
-Route::group([
+/*
+Route::group([*/
     /*
     'prefix' => '{locale?}',
     'where' => ['locale' => '^ru|kz$'],
     */
-    'middleware' => 'setlocale'], function() {
+    /*'middleware' => 'setlocale'], function() {*/
 
     Route::get('/', 'MainController@index')->name('main.index');
     Route::get('/contactus','ContactController@index')->name('contacts.index');
@@ -30,9 +30,7 @@ Route::group([
     Route::get('/history','HistoryController@index')->name('history.index');
     Route::get('/management','ManagementController@index')->name('management.index');
 
-    Route::get('/news', function () {
-        return view('newsindex');
-        })->name('news.index');
+    Route::get('/news', 'NewsController@index')->name('news.index');
     Route::get('/adminpanel/news/create', 'NewsController@create')->name('news.create');
     Route::post('/newspost', 'NewsController@store')->name('news.store');
     Route::get('/adminpanel/news/edit/{id}', 'NewsController@edit')->name('news.edit');
@@ -61,12 +59,10 @@ Route::group([
 
     Route::get('/search', 'MainController@search')->name('posts.search');
 
-    Auth::routes();
-
     Route::get('/adminpanel', 'AdminController@index')->name('adminpanel');
     Route::get('/adminpanel/engins', 'AdminListController@showEngins')->name('engins.admin.index');
     Route::get('/adminpanel/posts', 'AdminListController@showPosts')->name('posts.admin.index');
-        Route::get('/adminpanel/news', 'AdminListController@showNews')->name('news.admin.index');
+    Route::get('/adminpanel/news', 'AdminListController@showNews')->name('news.admin.index');
 
     Route::get('setlocale/{locale}', function ($locale) {
         if (in_array($locale, \Illuminate\Support\Facades\Config::get('app.locales'))) {
@@ -74,7 +70,9 @@ Route::group([
         }
         return redirect()->back();
     })->name('lang.change');
-});
+/*});*/
+
+Auth::routes();
 
 
 
