@@ -16,7 +16,7 @@ class NewsController extends Controller
      * @return \Illuminate\Http\Response
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function index(Request $request)
+    public function index()
     {
         $lastnews = DB::table('news')->orderBy('news.created_at', 'desc')->limit(3)->get();
         $lastposts = DB::table('posts')->orderBy('posts.created_at', 'desc')->limit(3)->get();
