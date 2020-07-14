@@ -101,7 +101,7 @@
             <div class="col-md-5 order-1 order-md-2">
                 <img src="{{asset('img/Коллаж.jpg')}}" class="img-fluid rounded" alt="НПЦ Агроинженерии фото">
             </div>
-            <div class="col-md-7 order-2 order-md-1 Checklist">
+            <div class="col-md-7 order-2 order-md-1 Checklist align-self-center">
                 <ul>
                     <li><i class="ri-check-double-line"></i>{{__('mainpage.struct1')}}
                     </li>
@@ -119,13 +119,13 @@
             </div>
         </div>
         <div>
-            <p style="text-align: center;">
+            <p class="text-justify">
                 {{__('mainpage.text1')}}
             </p>
         </div>
         <div class="row">
             <div class="col-md-5">
-                <img src="http://celinnii.kz/images/stt.gif" class="img-fluid" alt="">
+                <img src="{{asset('img/Холл первый этаж.JPG')}}" class="img-fluid" alt="НПЦ Агроинженерии Холл">
             </div>
             <div class="col-md-7">
                 <p class="text-justify">
@@ -133,7 +133,16 @@
                 </p>
             </div>
         </div>
-
+        <div>
+            <p class="text-justify">
+                {{__('mainpage.text3')}}
+            </p>
+        </div>
+        <div>
+            <p class="text-justify">
+                {{__('mainpage.text4')}}
+            </p>
+        </div>
         <!-- /END THE FEATURETTES -->
     </main>
 

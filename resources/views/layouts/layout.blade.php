@@ -189,13 +189,13 @@
             </div>
             <aside class="col-lg-4 side-bar col-md-12">
                 <ul class="nav nav-tabs" role="tablist" id="myTab">
-                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home"
+                    <li class="nav-item"><a class="nav-link active side-nav-link" data-toggle="tab" href="#home"
                                             role="tab">{{__('layouttext.newslink')}}</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#profile"
+                    <li class="nav-item"><a class="nav-link side-nav-link" data-toggle="tab" href="#profile"
                                             role="tab">{{__('layouttext.articleslink')}}</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#messages"
+                    <li class="nav-item"><a class="nav-link side-nav-link" data-toggle="tab" href="#messages"
                                             role="tab">{{__('layouttext.enginslink')}}</a>
                     </li>
                 </ul>
@@ -396,13 +396,17 @@
 
 
                 <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="https://www.gov.kz/memleket/entities/moa?lang=ru" target="_blank"><img src="{{asset('img/gerb.png')}}" class="img-fluid" alt="Министерство сельского хозяйства"></a>
+                    <a href="https://www.gov.kz/memleket/entities/moa?lang=ru" target="_blank"><img
+                            src="{{asset('img/gerb.png')}}" class="img-fluid"
+                            alt="Министерство сельского хозяйства"></a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="http://nasec.kz/ru" target="_blank"><img src="{{asset('img/nasecLogo.png')}}" class="img-fluid" alt="НАО «НАНОЦ»"></a>
+                    <a href="http://nasec.kz/ru" target="_blank"><img src="{{asset('img/nasecLogo.png')}}"
+                                                                      class="img-fluid" alt="НАО «НАНОЦ»"></a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="http://www.spcae.kz" target="_blank"><img src="{{asset('img/spcaeLogo.png')}}" class="img-fluid" alt="ТОО «НПЦ агроинженерии»"></a>
+                    <a href="http://www.spcae.kz" target="_blank"><img src="{{asset('img/spcaeLogo.png')}}"
+                                                                       class="img-fluid" alt="ТОО «НПЦ агроинженерии»"></a>
                 </div>
                 <!--
                                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
@@ -425,78 +429,79 @@
 
         </div>
     </section>
-
-    <div class="row">
-        <footer class="container">
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3 footer-about wow fadeInUp animated"
-                             style="visibility: visible; animation-name: fadeInUp;">
-                            <h3>{{__('layouttext.about')}}</h3>
-                            <p>
-                                {{__('layouttext.aboutcentr')}}
-                            </p>
-                            <p>© 2012-2020 Celinnii.kz</p>
-                            <div class="row">
-                                <div class="col footer-social">
-                                    <a href="#"><i class="ri-mail-line" style="font-size:30px"></i></a>
-                                    <a href="#"><i class="ri-instagram-line" style="font-size:30px"></i></a>
-                                    <a href="#"><i class="ri-youtube-line" style="font-size:30px"></i></a>
+    <section>
+        <div class="row">
+            <footer class="container">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3 footer-about wow fadeInUp animated"
+                                 style="visibility: visible; animation-name: fadeInUp;">
+                                <h3>{{__('layouttext.about')}}</h3>
+                                <p>
+                                    {{__('layouttext.aboutcentr')}}
+                                </p>
+                                <p>© 2012-2020 Celinnii.kz</p>
+                                <div class="row">
+                                    <div class="col footer-social">
+                                        <a href="#"><i class="ri-mail-line" style="font-size:30px"></i></a>
+                                        <a href="#"><i class="ri-instagram-line" style="font-size:30px"></i></a>
+                                        <a href="#"><i class="ri-youtube-line" style="font-size:30px"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown animated"
-                             style="visibility: visible; animation-name: fadeInDown;">
-                            <h3>{{__('layouttext.contactlink')}}</h3>
-                            <p><i class="sn ri-map-pin-2-line"></i> {{__('layouttext.adress')}}</p>
-                            <p><i class="sn ri-phone-line"></i> <a href="tel:+">+7 (7142) 55-81-46</a></p>
-                            <p><i class="sn ri-mail-line"></i> Email: <a
-                                    href="mailto:celinnii@mail.ru">celinnii@mail.ru</a>
-                            </p>
-                        </div>
-                        <div class="col-md-4 footer-links wow fadeInUp animated"
-                             style="visibility: visible; animation-name: fadeInUp;">
-                            <div class="row">
-                                <div class="col">
-                                    <h3>{{__('layouttext.navlink')}}</h3>
-                                </div>
+                            <div class="col-md-4 offset-md-1 footer-contact wow fadeInDown animated"
+                                 style="visibility: visible; animation-name: fadeInDown;">
+                                <h3>{{__('layouttext.contactlink')}}</h3>
+                                <p><i class="sn ri-map-pin-2-line"></i> {{__('layouttext.adress')}}</p>
+                                <p><i class="sn ri-phone-line"></i> <a href="tel:+">+7 (7142) 55-81-46</a></p>
+                                <p><i class="sn ri-mail-line"></i> Email: <a
+                                        href="mailto:celinnii@mail.ru">celinnii@mail.ru</a>
+                                </p>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p><a class="scroll-link"
-                                          href="{{route('main.index', app()->getLocale())}}">{{__('layouttext.mainlink')}}</a>
-                                    </p>
-                                    <p>
-                                        <a href="{{route('news.index', app()->getLocale())}}">{{__('layouttext.newslink')}}</a>
-                                    </p>
-                                    <p>
-                                        <a href="{{route('articles.index', app()->getLocale())}}">{{__('layouttext.articleslink')}}</a>
-                                    </p>
-                                    <p>
-                                        <a href="{{route('engin.index', app()->getLocale())}}">{{__('layouttext.enginslink')}}</a>
-                                    </p>
+                            <div class="col-md-4 footer-links wow fadeInUp animated"
+                                 style="visibility: visible; animation-name: fadeInUp;">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3>{{__('layouttext.navlink')}}</h3>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <p>
-                                        <a href="{{route('org.index', app()->getLocale())}}">{{__('layouttext.struclink')}}</a>
-                                    </p>
-                                    <p>
-                                        <a href="{{route('management.index', app()->getLocale())}}">{{__('layouttext.managerslink')}}</a>
-                                    </p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <p><a class="scroll-link"
+                                              href="{{route('main.index', app()->getLocale())}}">{{__('layouttext.mainlink')}}</a>
+                                        </p>
+                                        <p>
+                                            <a href="{{route('news.index', app()->getLocale())}}">{{__('layouttext.newslink')}}</a>
+                                        </p>
+                                        <p>
+                                            <a href="{{route('articles.index', app()->getLocale())}}">{{__('layouttext.articleslink')}}</a>
+                                        </p>
+                                        <p>
+                                            <a href="{{route('engin.index', app()->getLocale())}}">{{__('layouttext.enginslink')}}</a>
+                                        </p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>
+                                            <a href="{{route('org.index', app()->getLocale())}}">{{__('layouttext.struclink')}}</a>
+                                        </p>
+                                        <p>
+                                            <a href="{{route('management.index', app()->getLocale())}}">{{__('layouttext.managerslink')}}</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container">
+                <div class="footer-bottom">
+                    <div class="container">
 
+                    </div>
                 </div>
-            </div>
-        </footer>
-    </div>
+            </footer>
+        </div>
+    </section>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

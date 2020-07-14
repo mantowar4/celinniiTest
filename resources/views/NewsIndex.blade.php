@@ -1,7 +1,7 @@
 @extends('layouts.layout', ['title'=>'Новости'])
 
 @section('content')
-    
+
     <div class="container">
         @if(isset($_GET['search']))
             @if(count($news)>0)

@@ -179,17 +179,17 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\celinniiTest\public" />
       <recent name="D:\Projects\celinniiTest\public\img" />
       <recent name="D:\Projects\celinniiTest\resources\views" />
       <recent name="D:\Projects\celinniiTest\app\Http\Middleware" />
       <recent name="D:\Projects\celinniiTest\config" />
-      <recent name="D:\Projects\celinniiTest\resources\lang" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\celinniiTest\public\img" />
@@ -275,7 +275,7 @@
       <workItem from="1594543094538" duration="18000" />
       <workItem from="1594559114850" duration="228000" />
       <workItem from="1594635154687" duration="13149000" />
-      <workItem from="1594701342730" duration="4996000" />
+      <workItem from="1594701342730" duration="7407000" />
     </task>
     <servers />
   </component>
