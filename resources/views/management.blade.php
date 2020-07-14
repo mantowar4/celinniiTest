@@ -18,7 +18,7 @@
                                             </li>
                                             <li><i class="ri-check-double-line"></i>доктор технических наук, (2003)
                                             </li>
-                                            <li><i class="ri-check-double-line"></i>лстарший научный сотрудник, (1992)
+                                            <li><i class="ri-check-double-line"></i>старший научный сотрудник, (1992)
                                             </li>
                                             <li><i class="ri-check-double-line"></i>профессор, (2007)
                                             </li>

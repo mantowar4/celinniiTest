@@ -396,14 +396,13 @@
 
 
                 <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="http://www.spcae.kz" target="_blank"><img src="{{asset('img/spcaeLogo.png')}}" class="img-fluid" alt="ТОО «НПЦ агроинженерии»"></a>
+                    <a href="https://www.gov.kz/memleket/entities/moa?lang=ru" target="_blank"><img src="{{asset('img/gerb.png')}}" class="img-fluid" alt="Министерство сельского хозяйства"></a>
                 </div>
-
                 <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
                     <a href="http://nasec.kz/ru" target="_blank"><img src="{{asset('img/nasecLogo.png')}}" class="img-fluid" alt="НАО «НАНОЦ»"></a>
                 </div>
                 <div class="col-lg-4 col-md-4 col-6 d-flex align-items-center justify-content-center">
-                    <a href="https://www.gov.kz/memleket/entities/moa?lang=ru" target="_blank"><img src="{{asset('img/gerb.png')}}" class="img-fluid" alt="Министерство сельского хозяйства"></a>
+                    <a href="http://www.spcae.kz" target="_blank"><img src="{{asset('img/spcaeLogo.png')}}" class="img-fluid" alt="ТОО «НПЦ агроинженерии»"></a>
                 </div>
                 <!--
                                 <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
