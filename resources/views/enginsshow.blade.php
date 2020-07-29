@@ -16,7 +16,7 @@
                         {!! $engin->engin_description !!}
                         @if ($engin->engin_video_link !="")
                             <div class="col-md-8 m-auto">
-                                <h4 class="heading-small">Видиопрезентация</h4>
+                                <h4 class="heading-small">Видеопрезентация</h4>
                                 <div class="video-block">
                                     <div class="embed-responsive embed-responsive-4by3">
                                         {!! $engin->engin_video_link !!}

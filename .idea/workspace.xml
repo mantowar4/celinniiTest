@@ -40,20 +40,6 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="homestead: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="homestead@192.168.10.10" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="homestead: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="news: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="homestead@192.168.10.10" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="homestead: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="posts: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -199,6 +185,11 @@
       <recent name="D:\Projects\celinniiTest\resources\views" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="async" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
@@ -275,7 +266,10 @@
       <workItem from="1594543094538" duration="18000" />
       <workItem from="1594559114850" duration="228000" />
       <workItem from="1594635154687" duration="13149000" />
-      <workItem from="1594701342730" duration="7407000" />
+      <workItem from="1594701342730" duration="7603000" />
+      <workItem from="1594738181323" duration="891000" />
+      <workItem from="1595488671253" duration="626000" />
+      <workItem from="1596014375759" duration="6278000" />
     </task>
     <servers />
   </component>
@@ -335,10 +329,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="462" y="144" width="611" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1590677815040" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1593016956597">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1596015170520">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1593016956597" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1596015170520" />
     <state x="431" y="145" key="search.everywhere.popup" timestamp="1593013885515">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

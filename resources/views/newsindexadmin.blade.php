@@ -1,4 +1,4 @@
-@extends('adminpanel', ['title'=>'Разработки'])
+@extends('adminpanel', ['title'=>'Новости'])
 
 @section('create')
     <div class="container">
@@ -11,12 +11,12 @@
                              alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{$new->news_short_title}}</h5>
-                            <a href="{{ route('engin.show', ['id' => $new->news_id, app()->getLocale()]) }}"
+                            <a href="{{ route('news.show', ['id' => $new->news_id, app()->getLocale()]) }}"
                                class="btn btn-info my-2 my-sm-0">Подробнее</a>
-                            <a href="{{ route('engin.edit', ['id' => $new->news_id, app()->getLocale()]) }}"
+                            <a href="{{ route('news.edit', ['id' => $new->news_id, app()->getLocale()]) }}"
                                class="btn btn-success my-2 my-sm-0">Редактировать</a>
-                            <form action="{{route('engin.delete',['id'=>$new->news_id, app()->getLocale()])}}"
-                                  method="post">
+                            <form action="{{route('news.delete',['id'=>$new->news_id, app()->getLocale()])}}"
+                                  method="post" class="del-btn">
                                 @csrf
                                 @method('DELETE')
                                 <input type="submit" value="Удалить" class="btn btn-danger my-2 my-sm-0">

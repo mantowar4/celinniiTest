@@ -1,7 +1,7 @@
 @extends('adminpanel', ['title'=>"Редактирование разработки $engin->engine_title"])
 
 @section('create')
-    <form action="{{route('news.update', ['id'=>$engin->engin_id,app()->getLocale()])}}" method="post" enctype="multipart/form-data">
+    <form action="{{route('engin.update', ['id'=>$engin->engin_id,app()->getLocale()])}}" method="post" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
         <h3>Редактировать запись в 'Разработки'</h3>

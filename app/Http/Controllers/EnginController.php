@@ -98,6 +98,17 @@ class EnginController extends Controller
      */
     public function update(Request $request, $id)
     {
+        /*
+        $rx = '~
+        ^(?:https?://)?                           # Optional protocol
+        (?:www[.])?                              # Optional sub-domain
+        (?:youtube[.]com/watch[?]v=|youtu[.]be/) # Mandatory domain name (w/ query string in .com)
+        ([^&]{11})                               # Video id of 11 characters as capture group 1
+        ~x';
+
+        $has_match = preg_match($rx, $url, $matches);
+        */
+
         $engin = Engin::find($id);
         $engin->engin_title = $request->title;
         $engin->engin_short_title = Str::length($request->title) > 100 ? Str::substr($request->title, 0, 30) . '...' : $request->title;
@@ -111,7 +122,7 @@ class EnginController extends Controller
         }
         $engin -> update();
         $id = $engin -> engin_id;
-        return redirect()->route('articles.show',compact('id'))->with('success','Запись успешно добавлена!');
+        return redirect()->route('engin.show',compact('id'))->with('success','Запись успешно добавлена!');
     }
 
     /**

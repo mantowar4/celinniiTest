@@ -16,7 +16,7 @@
                             <a href="{{ route('engin.edit', ['id' => $engin->engin_id, app()->getLocale()]) }}"
                                class="btn btn-success my-2 my-sm-0">Редактировать</a>
                             <form action="{{route('engin.delete',['id'=>$engin->engin_id, app()->getLocale()])}}"
-                                  method="post">
+                                  method="post" class="del-btn">
                                 @csrf
                                 @method('DELETE')
                                 <input type="submit" value="Удалить" class="btn btn-danger my-2 my-sm-0">
