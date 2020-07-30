@@ -4,7 +4,7 @@
 
     <main role="main">
         <h3 class="heading-large" style="text-align: center;">Свяжитесь с нами</h3>
-        <div class="row">
+        <div class="row contacts">
             <div class="col-sm-5" id="contact2">
                 <h3>Наши контакты</h3>
                 <hr align="left" width="50%">
