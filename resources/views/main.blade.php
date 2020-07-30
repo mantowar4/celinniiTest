@@ -12,59 +12,6 @@
             <a href="#about" class="test link btn-get-started animated fadeInUp">О нас
                 <i class="ri-arrow-down-s-line"></i>
             </a>
-            <!--<div class="row">
-                <div class="col-lg-3 py-5">
-                    <div class="services heading-section ftco-animate fadeInUp ftco-animated">
-                        <h2 class="mb-4" style="font-size: 1.5rem">НПЦ Агроинженерии</h2>
-                        <p>является филиалом ведущего научного учреждения Казахстана, решающем проблемы технического
-                            обеспечения агропромышленного комплекса.</p>
-                    </div>
-                </div>
-                <div class="col-lg-9 services-wrap px-4 pt-5">
-                    <div class="row pt-md-3">
-                        <div class="col-md-4 d-flex align-items-stretch">
-                            <div class="services text-center">
-                                <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-lawyer"></span>
-                                </div>
-                                <div class="text">
-                                    <h3>Статьи</h3>
-                                    <p>Мы постоянно публикуем научные труды на самые актуальные темы аграрного
-                                        сектора.</p>
-                                </div>
-                                <a href="#" class="btn-custom d-flex align-items-center justify-content-center">Подробнее<i
-                                        class="ri-arrow-right-s-line"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 d-flex align-items-stretch">
-                            <div class="services text-center">
-                                <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-lawyer"></span>
-                                </div>
-                                <div class="text">
-                                    <h3>Разработки</h3>
-                                    <p>Мы разрабатываем решения для аграрного сектора.</p>
-                                </div>
-                                <a href="#" class="btn-custom d-flex align-items-center justify-content-center">Подробнее<i
-                                        class="ri-arrow-right-s-line"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-md-4 d-flex align-items-stretch">
-                            <div class="services text-center">
-                                <div class="icon d-flex justify-content-center align-items-center">
-                                    <span class="flaticon-lawyer"></span>
-                                </div>
-                                <div class="text">
-                                    <h3>Испытания</h3>
-                                    <p>Мы единственные кто проводит акредетацию машин в костанайской области.</p>
-                                </div>
-                                <a href="#" class="btn-custom d-flex align-items-center justify-content-center">Подробнее<i
-                                        class="ri-arrow-right-s-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>-->
         </div>
     </section>
 @endsection

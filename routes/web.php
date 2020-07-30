@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return redirect()->route('main.index', app()->getLocale());
 });
-/*
-Route::group([*/
-    /*
-    'prefix' => '{locale?}',
-    'where' => ['locale' => '^ru|kz$'],
-    */
-    /*'middleware' => 'setlocale'], function() {*/
+
+Route::group([
+
+    /*'prefix' => '{locale?}',
+    'where' => ['locale' => '^ru|kz$'],*/
+
+    'middleware' => 'setlocale'], function() {
 
     Route::get('/', 'MainController@index')->name('main.index');
     Route::get('/contactus','ContactController@index')->name('contacts.index');
@@ -64,17 +64,15 @@ Route::group([*/
     Route::get('/adminpanel/posts', 'AdminListController@showPosts')->name('posts.admin.index');
     Route::get('/adminpanel/news', 'AdminListController@showNews')->name('news.admin.index');
 
-    Route::get('setlocale/{locale}', function ($locale) {
-        if (in_array($locale, \Illuminate\Support\Facades\Config::get('app.locales'))) {
-            session(['locale' => $locale]);
-        }
-        return redirect()->back();
-    })->name('lang.change');
-/*});*/
+});
 
 Auth::routes();
 
-
-
+Route::get('setlocale/{locale}', function ($locale) {
+    if (in_array($locale, \Illuminate\Support\Facades\Config::get('app.locales'))) {
+        session(['locale' => $locale]);
+    }
+    return redirect()->back();
+})->name('lang.change');
 
 

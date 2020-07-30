@@ -16,79 +16,6 @@
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!---
-<nav class="container navbar navbar-expand-lg navbar-light fixed-top bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('main.index')}}" >Главная</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('news.index')}}">Новости</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Публикации</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Разработки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Тестирования</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    О нас
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Деятельность</a>
-                    <a class="dropdown-item" href="#">История</a>
-                    <a class="dropdown-item" href="#">Структура</a>
-                    <a class="dropdown-item" href="#">Руководство</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Контакты</a>
-                </div>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0" action="{{route('posts.search')}}">
-            <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
---->
-<!---
-<section class="top-nav">
-    <nav class="navbar navbar-expand-lg py-0">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="exCollapsingNavbar2">
-                <ul class="nav navbar-nav ">
-                    <li class="nav-item active"><a class="nav-link" href="{{route('main.index')}}">Главная <span
-                                class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{route('news.index')}}">Новости</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Публикации</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Разработки</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Испытания</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">О нас</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
-                </ul>
-                <form class="ml-auto form-inline my-2 my-lg-0" action="{{route('posts.search')}}">
-                    <input class="form-control mr-sm-2" name="search" type="search" placeholder="Поиск..."
-                           aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-</section>--->
 <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
@@ -146,26 +73,18 @@
                     </button>
                 </form>
             </div>
-            <!---
-            <div class="social-part">
-                <a href="mailto:celinnii@mail.ru"><i class="sn ri-mail-line" aria-hidden="true"></i></a>
-                <a href="#"><i class="sn ri-instagram-line" aria-hidden="true"></i></a>
-                <a href="https://www.youtube.com/channel/UCPGT2pBWkYotQaGsjwykcuA" target="_blank"><i
-                        class="sn ri-youtube-line" aria-hidden="true"></i></a>
-            </div>
-            --->
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('engin.index', app()->getLocale())}}"><i class="sn ri-mail-line"
+                    <a class="nav-link" href="mailto:celinnii@mail.ru"><i class="sn ri-mail-line"
                                                                                                aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('engin.index', app()->getLocale())}}"><i
+                    <a class="nav-link" href="#"><i
                             class="sn ri-instagram-line"
                             aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('engin.index', app()->getLocale())}}"><i
+                    <a class="nav-link" href="#"><i
                             class="sn ri-youtube-line" aria-hidden="true"></i></a>
                 </li>
                 @foreach (config('app.available_locales') as $locale)
@@ -373,6 +292,7 @@
                         @endif
                     </div>
                 </div>
+                <!---
                 <div class="video-sec">
                     <h4 class="heading-small">{{__('layouttext.videolink')}}</h4>
                     <div class="video-block">
@@ -382,6 +302,7 @@
                         </div>
                     </div>
                 </div>
+                --->
             </aside>
         </div>
     </section>
@@ -443,7 +364,7 @@
                                 <p>© 2012-2020 Celinnii.kz</p>
                                 <div class="row">
                                     <div class="col footer-social">
-                                        <a href="#"><i class="ri-mail-line" style="font-size:30px"></i></a>
+                                        <a href="mailto:celinnii@mail.ru"><i class="ri-mail-line" style="font-size:30px"></i></a>
                                         <a href="#"><i class="ri-instagram-line" style="font-size:30px"></i></a>
                                         <a href="#"><i class="ri-youtube-line" style="font-size:30px"></i></a>
                                     </div>
