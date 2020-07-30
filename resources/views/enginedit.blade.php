@@ -7,17 +7,17 @@
         <h3>Редактировать запись в 'Разработки'</h3>
         <div class="form-group">
             <p>Заголовок</p>
-            <input name="title" type="text" class="form-control" value="{{$engin->engin_title}}" required>
+            <input name="title" type="text" class="form-control" value="{{ old('title') ?? $engin->engin_title ?? '' }}">
         </div>
         <div class="form-group">
             <p>Текст разработки</p>
             <textarea name="description" rows="10" class="form-control" id="textbox" required>
-                {{$engin->engin_description}}
+                {{ old('description') ?? $engin->engin_description ?? '' }}
             </textarea>
         </div>
         <div class="form-group">
             <p>Ссылка на видео</p>
-            <input name="link" type="text" class="form-control" value="{{$engin->engin_video_link}}" required>
+            <input name="link" type="text" class="form-control" value="{{ old('link') ?? $engin->engin_video_link ?? '' }}">
         </div>
         <div class="form-group">
             <p>Изображение - заголовок</p>

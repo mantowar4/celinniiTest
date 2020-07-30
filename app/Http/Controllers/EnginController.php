@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Engin;
+use App\Http\Requests\EngineRequest;
 use App\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -45,7 +46,7 @@ class EnginController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EngineRequest $request)
     {
         $engin = new Engin();
         $engin->engin_title = $request->title;
@@ -96,7 +97,7 @@ class EnginController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(EngineRequest $request, $id)
     {
         /*
         $rx = '~

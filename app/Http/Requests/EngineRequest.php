@@ -13,7 +13,7 @@ class EngineRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class EngineRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title'=> 'required|min:3|max:40',
+            'description'=>'required|min:10',
+            'img'=>'mimes:jpeg,png,jpg|max:5000',
         ];
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\NewsRequest;
 use App\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -66,7 +67,7 @@ class NewsController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(NewsRequest $request)
     {
         $new = new News();
         $new->news_title = $request->title;
@@ -116,7 +117,7 @@ class NewsController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(NewsRequest $request, $id)
     {
         $new = News::find($id);
         $new->news_title = $request->title;

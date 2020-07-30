@@ -7,12 +7,12 @@
         <h3>Редактировать запись в 'Новости'</h3>
         <div class="form-group">
             <p>Заголовок</p>
-            <input name="title" type="text" class="form-control" value="{{$new->news_title}}" required>
+            <input name="title" type="text" class="form-control" value="{{ old('title') ?? $new->news_title ?? '' }}">
         </div>
         <div class="form-group">
             <p>Текст новости</p>
-            <textarea name="description" rows="10" class="form-control" id="textbox" required>
-                {{$new->news_description}}
+            <textarea name="description" rows="10" class="form-control" id="textbox">
+                {{ old('description') ?? $new->news_description ?? '' }}
             </textarea>
         </div>
         <div class="form-group">
