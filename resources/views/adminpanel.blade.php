@@ -30,13 +30,13 @@
                     @foreach (config('app.available_locales') as $locale)
                         <li class="nav-item">
                             <a class="nav-link"
-                               href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), $locale) }}"
+                               href="{{ route('lang.change',$locale) }}"
                                @if (app()->getLocale() == $locale) style="font-weight: bold; text-decoration: underline" @endif>{{ strtoupper($locale) }}</a>
                         </li>
                     @endforeach
                     <li class="nav-item">
                         <a class="nav-link"
-                           href="{{ route('main.index',app()->getLocale()) }}">{{ __('Вернуться на сайт') }}</a>
+                           href="{{ route('main.index',app()->getLocale()) }}">{{__('layouttext.backtomain')}}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('login',app()->getLocale()) }}">{{ __('Войти') }}</a>
