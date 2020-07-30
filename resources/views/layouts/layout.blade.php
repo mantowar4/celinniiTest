@@ -95,12 +95,12 @@
                                                                                                aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i
+                    <a target="_blank" class="nav-link" href="https://www.instagram.com/kostanay_branch_spcae/"><i
                             class="sn ri-instagram-line"
                             aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i
+                    <a target="_blank" class="nav-link" href="https://www.youtube.com/channel/UCdBd68XRPIEsEVEUPtLnuww/featured"><i
                             class="sn ri-youtube-line" aria-hidden="true"></i></a>
                 </li>
                 @foreach (config('app.available_locales') as $locale)
@@ -381,8 +381,8 @@
                                 <div class="row">
                                     <div class="col footer-social">
                                         <a href="mailto:celinnii@mail.ru"><i class="ri-mail-line" style="font-size:30px"></i></a>
-                                        <a href="#"><i class="ri-instagram-line" style="font-size:30px"></i></a>
-                                        <a href="#"><i class="ri-youtube-line" style="font-size:30px"></i></a>
+                                        <a target="_blank" href="https://www.instagram.com/kostanay_branch_spcae/"><i class="ri-instagram-line" style="font-size:30px"></i></a>
+                                        <a target="_blank" href="https://www.youtube.com/channel/UCdBd68XRPIEsEVEUPtLnuww/featured"><i class="ri-youtube-line" style="font-size:30px"></i></a>
                                     </div>
                                 </div>
                             </div>

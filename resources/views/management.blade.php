@@ -47,7 +47,7 @@
                             <div class="row">
                                 <div class="col-12 col-lg-8 col-md-6">
                                     <h4 class="mb-0 text-truncated">Бинюков Юрий Викторович</h4>
-                                    <p class="lead">Заместитель Директора Костанайского филиала «НПЦ агроинженерии»</p>
+                                    <p class="lead">Заместитель директора Костанайского филиала «НПЦ агроинженерии»</p>
                                     <div class="Checklist">
                                         <ul>
                                             <li><i class="ri-check-double-line"></i>кандидат технических наук, (2010)
