@@ -151,7 +151,7 @@
                                                 href="{{ route('news.show', ['id' => $lastnews[0]->news_id, app()->getLocale()]) }}">{{$lastnews[0]->news_short_title}}</a>
                                         </h2>
                                     </div>
-                                    <div class="news-auther"><span class="time">1h ago</span></div>
+                                    <div class="news-auther"><span class="time">Создано {{\Carbon\Carbon::parse($lastnews[0]->created_at)->format('d.m.Y')}}</span></div>
                                 </div>
                             </div>
                         @endif
@@ -170,7 +170,7 @@
                                                 href="{{ route('news.show', [app()->getLocale(), 'id' => $lastnews[1]->news_id]) }}">{{$lastnews[1]->news_short_title}}</a>
                                         </h2>
                                     </div>
-                                    <div class="news-auther"><span class="time">1h ago</span></div>
+                                    <div class="news-auther"><span class="time">Создано {{\Carbon\Carbon::parse($lastnews[1]->created_at)->format('d.m.Y')}}</span></div>
                                 </div>
                             </div>
                         @endif
@@ -189,7 +189,7 @@
                                                 href="{{ route('news.show',[app()->getLocale(), 'id' => $lastnews[2]->news_id]) }}">{{$lastnews[2]->news_short_title}}</a>
                                         </h2>
                                     </div>
-                                    <div class="news-auther"><span class="time">1h ago</span></div>
+                                    <div class="news-auther"><span class="time">Создано {{\Carbon\Carbon::parse($lastnews[2]->created_at)->format('d.m.Y')}}</span></div>
                                 </div>
                             </div>
                         @endif
@@ -209,7 +209,7 @@
                                                 href="{{ route('articles.show', ['id' => $lastposts[0]->post_id, app()->getLocale()]) }}">{{$lastposts[0]->post_short_title}}</a>
                                         </h2>
                                     </div>
-                                    <div class="news-auther"><span class="time">1h ago</span></div>
+                                    <div class="news-auther"><span class="time">Создано {{\Carbon\Carbon::parse($lastposts[0]->created_at)->format('d.m.Y')}}</span></div>
                                 </div>
                             </div>
                         @endif
@@ -227,7 +227,7 @@
                                                 href="{{ route('articles.show', ['id' => $lastposts[1]->post_id, app()->getLocale()]) }}">{{$lastposts[1]->post_short_title}}</a>
                                         </h2>
                                     </div>
-                                    <div class="news-auther"><span class="time">1h ago</span></div>
+                                    <div class="news-auther"><span class="time">Создано {{\Carbon\Carbon::parse($lastposts[1]->created_at)->format('d.m.Y')}}</span></div>
                                 </div>
                             </div>
                         @endif
@@ -245,7 +245,7 @@
                                                 href="{{ route('articles.show', ['id' => $lastposts[2]->post_id, app()->getLocale()]) }}">{{$lastposts[2]->post_short_title}}</a>
                                         </h2>
                                     </div>
-                                    <div class="news-auther"><span class="time">1h ago</span></div>
+                                    <div class="news-auther"><span class="time">Создано {{\Carbon\Carbon::parse($lastposts[2]->created_at)->format('d.m.Y')}}</span></div>
                                 </div>
                             </div>
                         @endif
@@ -265,7 +265,7 @@
                                                 href="{{ route('engin.show', ['id' => $lastengins[0]->engin_id, app()->getLocale()]) }}">{{$lastengins[0]->engin_short_title}}</a>
                                         </h2>
                                     </div>
-                                    <div class="news-auther"><span class="time">1h ago</span></div>
+                                    <div class="news-auther"><span class="time">Создано {{\Carbon\Carbon::parse($lastengins[0]->created_at)->format('d.m.Y')}}</span></div>
                                 </div>
                             </div>
                         @endif
@@ -283,7 +283,7 @@
                                                 href="{{ route('engin.show', ['id' => $lastengins[1]->engin_id, app()->getLocale()]) }}">{{$lastengins[1]->engin_short_title}}</a>
                                         </h2>
                                     </div>
-                                    <div class="news-auther"><span class="time">1h ago</span></div>
+                                    <div class="news-auther"><span class="time">Создано {{\Carbon\Carbon::parse($lastengins[1]->created_at)->format('d.m.Y')}}</span></div>
                                 </div>
                             </div>
                         @endif
@@ -301,7 +301,7 @@
                                                 href="{{ route('engin.show', ['id' => $lastengins[2]->engin_id, app()->getLocale()]) }}">{{$lastengins[2]->engin_short_title}}</a>
                                         </h2>
                                     </div>
-                                    <div class="news-auther"><span class="time">1h ago</span></div>
+                                    <div class="news-auther"><span class="time">Создано {{\Carbon\Carbon::parse($lastengins[2]->created_at)->format('d.m.Y')}}</span></div>
                                 </div>
                             </div>
 

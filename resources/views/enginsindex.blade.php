@@ -22,7 +22,7 @@
                             <a href="{{ route('engin.show', ['id' => $engin->engin_id,app()->getLocale()]) }}" class="btn btn-info my-2 my-sm-0">Подробнее</a>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Created {{$engin->created_at}}</small>
+                            <small class="text-muted">Создано {{\Carbon\Carbon::parse($engin->created_at)->format('d.m.Y')}}</small>
                         </div>
                     </div>
                 </div>

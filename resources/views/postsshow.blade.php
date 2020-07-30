@@ -12,13 +12,10 @@
                         <h5 class="card-subtitle">{{$post->post_short_title}}</h5>
                         <img class="card-img-top" src="{{ $post->post_img ?? asset('img/default-img.jpg')}}" alt="Card image cap">
                         <p class="card-text text-center">
-                            <?php
-                            echo nl2br($post->post_description);
-                            ?></p>
-
+                            {!! $post->post_description !!}
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Created {{$post->created_at}}</small>
+                        <small class="text-muted">Создано {{$post->created_at->format('d.m.Y')}}</small>
                         <a href="{{route('news.index',app()->getLocale())}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все новости.</a>
                     </div>
                 </div>

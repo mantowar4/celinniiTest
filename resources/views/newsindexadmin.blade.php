@@ -23,12 +23,20 @@
                             </form>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">Created {{$new->created_at}}</small>
+                            <div>
+                                <small
+                                    class="text-muted">Создано {{\Carbon\Carbon::parse($new->created_at)->format('d.m.Y')}}</small>
+                            </div>
+                            <div>
+                                <small
+                                    class="text-muted">Последние
+                                    изменения {{\Carbon\Carbon::parse($new->updated_at)->format('d.m.Y')}}</small>
+                            </div>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
-    <div class="links">{{ $news->links() }}</div>
+        <div class="links">{{ $news->links() }}</div>
     </div>
 @endsection

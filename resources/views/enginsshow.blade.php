@@ -26,7 +26,7 @@
                         @endif
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Created {{$engin->created_at}}</small>
+                        <small class="text-muted">Создано {{$engin->created_at->format('d.m.Y')}}</small>
                         <a href="{{route('engin.index',app()->getLocale())}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все
                             новости.</a>
                     </div>
