@@ -45,7 +45,7 @@
                                        class="btn btn-info my-2 my-sm-0">Подробнее</a>
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted">Created {{$engin->created_at}}</small>
+                                    <small class="text-muted">Создано {{\Carbon\Carbon::parse($engin->created_at)->format('d.m.Y')}}</small>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                                        class="btn btn-info my-2 my-sm-0">Подробнее</a>
                                 </div>
                                 <div class="card-footer">
-                                    <small class="text-muted">Created {{$post->created_at}}</small>
+                                    <small class="text-muted">Создано {{\Carbon\Carbon::parse($post->created_at)->format('d.m.Y')}}</small>
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                    class="btn btn-info my-2 my-sm-0">Подробнее</a>
                             </div>
                             <div class="card-footer">
-                                <small class="text-muted">Created {{$new->created_at}}</small>
+                                <small class="text-muted">Создано {{\Carbon\Carbon::parse($new->created_at)->format('d.m.Y')}}</small>
                             </div>
                         </div>
                     </div>
