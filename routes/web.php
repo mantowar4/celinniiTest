@@ -22,13 +22,13 @@ Route::group([
     /*'prefix' => '{locale?}',
     'where' => ['locale' => '^ru|kz$'],*/
 
-    'middleware' => 'setlocale'], function() {
+    'middleware' => 'setlocale'], function () {
 
     Route::get('/', 'MainController@index')->name('main.index');
-    Route::get('/contactus','ContactController@index')->name('contacts.index');
-    Route::get('/working','WorkingController@index')->name('working.index');
-    Route::get('/history','HistoryController@index')->name('history.index');
-    Route::get('/management','ManagementController@index')->name('management.index');
+    Route::get('/contactus', 'ContactController@index')->name('contacts.index');
+    Route::get('/working', 'WorkingController@index')->name('working.index');
+    Route::get('/history', 'HistoryController@index')->name('history.index');
+    Route::get('/management', 'ManagementController@index')->name('management.index');
 
     Route::get('/news', 'NewsController@index')->name('news.index');
     Route::get('/adminpanel/news/create', 'NewsController@create')->name('news.create');
@@ -54,8 +54,8 @@ Route::group([
     Route::patch('/engin/update/{id}', 'EnginController@update')->name('engin.update');
     Route::delete('/engin/delete/{id}', 'EnginController@destroy')->name('engin.delete');
 
-    Route::get('/organization','OrgController@index')->name('org.index');
-    Route::get('/organization/show/{id}','OrgController@show')->name('org.show');
+    Route::get('/organization', 'OrgController@index')->name('org.index');
+    Route::get('/organization/show/{id}', 'OrgController@show')->name('org.show');
 
     Route::get('/search', 'MainController@search')->name('posts.search');
 
@@ -67,7 +67,7 @@ Route::group([
 });
 
 Auth::routes([
-    'register' => false, // Registration Routes...
+    'register' => true, // Registration Routes...
     'reset' => false, // Password Reset Routes...
     'verify' => false, // Email Verification Routes...
 ]);
@@ -79,4 +79,8 @@ Route::get('setlocale/{locale}', function ($locale) {
     return redirect()->back();
 })->name('lang.change');
 
-
+Route::get('/foo', function () {
+    $exitCode = Artisan::call('migrate:refresh', [
+        '--force' => true,
+    ]);
+});
