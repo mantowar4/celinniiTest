@@ -67,7 +67,7 @@ Route::group([
 });
 
 Auth::routes([
-    'register' => true, // Registration Routes...
+    'register' => false, // Registration Routes...
     'reset' => false, // Password Reset Routes...
     'verify' => false, // Email Verification Routes...
 ]);
@@ -79,8 +79,10 @@ Route::get('setlocale/{locale}', function ($locale) {
     return redirect()->back();
 })->name('lang.change');
 
+/*
 Route::get('/foo', function () {
     $exitCode = Artisan::call('migrate:refresh', [
         '--force' => true,
     ]);
 });
+*/
