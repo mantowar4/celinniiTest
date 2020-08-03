@@ -66,7 +66,11 @@ Route::group([
 
 });
 
-Auth::routes();
+Auth::routes([
+    'register' => false, // Registration Routes...
+    'reset' => false, // Password Reset Routes...
+    'verify' => false, // Email Verification Routes...
+]);
 
 Route::get('setlocale/{locale}', function ($locale) {
     if (in_array($locale, \Illuminate\Support\Facades\Config::get('app.locales'))) {
