@@ -46,7 +46,7 @@
         </div>
         <div class="row">
             <div class="col-md-5 order-1 order-md-2">
-                <img src="{{asset('img/Коллаж.jpg')}}" class="img-fluid rounded" alt="НПЦ Агроинженерии фото">
+                <img src="{{asset('img/Коллаж2.jpg')}}" class="img-fluid rounded" alt="НПЦ Агроинженерии фото">
             </div>
             <div class="col-md-7 order-2 order-md-1 Checklist align-self-center">
                 <ul>
@@ -72,7 +72,7 @@
         </div>
         <div class="row">
             <div class="col-md-5">
-                <img src="{{asset('img/Холл первый этаж.JPG')}}" class="img-fluid" alt="НПЦ Агроинженерии Холл">
+                <img src="{{asset('img/Холл-первый-этаж2.jpg')}}" class="img-fluid" alt="НПЦ Агроинженерии Холл">
             </div>
             <div class="col-md-7">
                 <p class="text-justify">
