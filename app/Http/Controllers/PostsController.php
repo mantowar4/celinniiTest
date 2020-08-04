@@ -106,7 +106,7 @@ class PostsController extends Controller
         {
             $path = Storage::putFile('public',$request->file('img'));
             $url = Storage::url($path);
-            $post->engin_img = $url;
+            $post->post_img = $url;
         }
         $post -> update();
         $id = $post->post_id;
