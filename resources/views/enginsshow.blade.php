@@ -8,7 +8,7 @@
                     <div class="card-header">
                         <h3 class="card-title">{{$engin->engin_title}}</h3>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body img-fluid">
                         <img class="card-img-top" src="{{ $engin->engin_img ?? asset('img/default-img.jpg')}}"
                              alt="Card image cap">
                         <p class="card-text text-center">
