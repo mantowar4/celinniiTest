@@ -9,7 +9,6 @@
                         <h3 class="card-title">{{$post->post_title}}</h3>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-subtitle">{{$post->post_short_title}}</h5>
                         <img class="card-img-top" src="{{ $post->post_img ?? asset('img/default-img.jpg')}}" alt="Card image cap">
                         <p class="card-text text-center">
                             {!! $post->post_description !!}
