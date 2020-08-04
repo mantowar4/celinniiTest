@@ -177,19 +177,19 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\celinniiTest\database\migrations\NotRefresh" />
+      <recent name="D:\Projects\celinniiTest\public\img" />
+      <recent name="D:\Projects\celinniiTest\app\Http\Controllers" />
+      <recent name="D:\Projects\celinniiTest\public\js" />
+      <recent name="D:\Projects\celinniiTest\resources\views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Projects\celinniiTest\public" />
       <recent name="D:\Projects\celinniiTest\public\img" />
       <recent name="D:\Projects\celinniiTest\resources\views" />
       <recent name="D:\Projects\celinniiTest\app\Http\Middleware" />
       <recent name="D:\Projects\celinniiTest\config" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects\celinniiTest\public\img" />
-      <recent name="D:\Projects\celinniiTest\app\Http\Controllers" />
-      <recent name="D:\Projects\celinniiTest\database\migrations\NotRefresh" />
-      <recent name="D:\Projects\celinniiTest\public\js" />
-      <recent name="D:\Projects\celinniiTest\resources\views" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -280,7 +280,7 @@
       <workItem from="1596099647956" duration="10350000" />
       <workItem from="1596441967057" duration="308000" />
       <workItem from="1596451727537" duration="1381000" />
-      <workItem from="1596528383358" duration="1186000" />
+      <workItem from="1596528383358" duration="2307000" />
     </task>
     <servers />
   </component>
