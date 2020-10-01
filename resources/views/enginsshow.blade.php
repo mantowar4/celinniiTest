@@ -13,6 +13,7 @@
                              alt="Card image cap">
                         <p class="card-text text-center">
                         {!! $engin->engin_description !!}
+                        </p>
                         @if ($engin->engin_video_link !="")
                             <div class="col-md-8 m-auto">
                                 <h4 class="heading-small">Видеопрезентация</h4>
@@ -23,11 +24,14 @@
                                 </div>
                             </div>
                         @endif
+                        @if ($engin->engin_pdf != null)
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="{!! $engin->engin_pdf !!}" target="_blank">Скачать PDF</a>
+                        @endif
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Создано {{$engin->created_at->format('d.m.Y')}}</small>
+                    <!---<small class="text-muted">Создано {{$engin->created_at->format('d.m.Y')}}</small>--->
                         <a href="{{route('engin.index',app()->getLocale())}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все
-                            новости.</a>
+                            Разработки.</a>
                     </div>
                 </div>
             </div>

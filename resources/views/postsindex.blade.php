@@ -21,9 +21,9 @@
                             <h5 class="card-title">{{$post->post_short_title}}</h5>
                             <a href="{{ route('articles.show', ['id' => $post->post_id,app()->getLocale()]) }}" class="btn btn-info my-2 my-sm-0">Подробнее</a>
                         </div>
-                        <div class="card-footer">
+                    <!---<div class="card-footer">
                             <small class="text-muted">Создано {{\Carbon\Carbon::parse($post->created_at)->format('d.m.Y')}}</small>
-                        </div>
+                        </div>--->
                     </div>
                 </div>
             @endforeach

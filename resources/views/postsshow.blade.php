@@ -14,8 +14,8 @@
                             {!! $post->post_description !!}
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Создано {{$post->created_at->format('d.m.Y')}}</small>
-                        <a href="{{route('news.index',app()->getLocale())}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все новости.</a>
+                    <!---<small class="text-muted">Создано {{$post->created_at->format('d.m.Y')}}</small>--->
+                        <a href="{{route('articles.index',app()->getLocale())}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все статьи.</a>
                     </div>
                 </div>
             </div>

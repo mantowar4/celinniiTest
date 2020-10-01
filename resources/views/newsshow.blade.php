@@ -14,7 +14,7 @@
                             {!! $new->news_description !!}
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Создано {{$new->created_at->format('d.m.Y')}}</small>
+                    <!---<small class="text-muted">Создано {{$new->created_at->format('d.m.Y')}}</small>--->
                         <a href="{{route('news.index',app()->getLocale())}}" class="btn btn-outline-success my-2 my-sm-0">Отобразить все новости.</a>
                     </div>
                 </div>

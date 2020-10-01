@@ -23,6 +23,10 @@
             <p>Изображение - заголовок</p>
             <input name="img" type="file">
         </div>
+        <div class="form-group">
+            <p>PDF файл</p>
+            <input name="pdf" type="file">
+        </div>
         <input type="submit" value="Редактировать разработку" class="btn btn-outline-info">
     </form>
     <script type="text/javascript">

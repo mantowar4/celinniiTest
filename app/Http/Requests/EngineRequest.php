@@ -27,6 +27,7 @@ class EngineRequest extends FormRequest
             'title'=> 'required|min:3|max:100',
             'description'=>'required|min:10',
             'img'=>'mimes:jpeg,png,jpg|max:5000',
+            'pdf'=>'mimes:pdf|max:5000',
         ];
     }
 }

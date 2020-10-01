@@ -47,13 +47,6 @@
         <item name="homestead: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="engins: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="homestead@192.168.10.10" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="homestead: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="posts: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -290,6 +283,7 @@
       <workItem from="1596528383358" duration="4841000" />
       <workItem from="1596538199050" duration="75000" />
       <workItem from="1596690374049" duration="151000" />
+      <workItem from="1601540018548" duration="4832000" />
     </task>
     <servers />
   </component>

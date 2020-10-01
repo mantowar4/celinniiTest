@@ -27,9 +27,9 @@
                                 <a href="{{ route('news.show', ['id' => $new->news_id]) }}"
                                    class="btn btn-info my-2 my-sm-0">Подробнее</a>
                             </div>
-                            <div class="card-footer">
+                        <!---<div class="card-footer">
                                 <small class="text-muted">Создано {{\Carbon\Carbon::parse($new->created_at)->format('d.m.Y')}}</small>
-                            </div>
+                            </div>--->
                         </div>
                     </div>
                 @endforeach
@@ -44,9 +44,9 @@
                                     <a href="{{ route('news.show', ['id' => $engin->engin_id,app()->getLocale()]) }}"
                                        class="btn btn-info my-2 my-sm-0">Подробнее</a>
                                 </div>
-                                <div class="card-footer">
+                            <!---<div class="card-footer">
                                     <small class="text-muted">Создано {{\Carbon\Carbon::parse($engin->created_at)->format('d.m.Y')}}</small>
-                                </div>
+                                </div>--->
                             </div>
                         </div>
                     @endforeach
@@ -62,9 +62,9 @@
                                     <a href="{{ route('news.show', ['id' => $post->post_id,app()->getLocale()]) }}"
                                        class="btn btn-info my-2 my-sm-0">Подробнее</a>
                                 </div>
-                                <div class="card-footer">
+                            <!---<div class="card-footer">
                                     <small class="text-muted">Создано {{\Carbon\Carbon::parse($post->created_at)->format('d.m.Y')}}</small>
-                                </div>
+                                </div>--->
                             </div>
                         </div>
                     @endforeach
@@ -82,9 +82,9 @@
                                 <a href="{{ route('news.show', ['id' => $new->news_id,app()->getLocale()]) }}"
                                    class="btn btn-info my-2 my-sm-0">Подробнее</a>
                             </div>
-                            <div class="card-footer">
+                        <!---<div class="card-footer">
                                 <small class="text-muted">Создано {{\Carbon\Carbon::parse($new->created_at)->format('d.m.Y')}}</small>
-                            </div>
+                            </div>--->
                         </div>
                     </div>
                 @endforeach

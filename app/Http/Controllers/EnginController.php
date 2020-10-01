@@ -59,6 +59,12 @@ class EnginController extends Controller
             $url = Storage::url($path);
             $engin->engin_img = $url;
         }
+        if ($request->file('pdf'))
+        {
+            $path_pdf = Storage::putFile('public',$request->file('pdf'));
+            $url_pdf = Storage::url($path_pdf);
+            $engin->engin_pdf = $url_pdf;
+        }
         $engin -> save();
         return redirect()->route('adminpanel')->with('success','Запись успешно добавлена!');
     }
@@ -120,6 +126,12 @@ class EnginController extends Controller
             $path = Storage::putFile('public',$request->file('img'));
             $url = Storage::url($path);
             $engin->engin_img = $url;
+        }
+        if ($request->file('pdf'))
+        {
+            $path_pdf = Storage::putFile('public',$request->file('pdf'));
+            $url_pdf = Storage::url($path_pdf);
+            $engin->engin_pdf = $url_pdf;
         }
         $engin -> update();
         $id = $engin -> engin_id;
